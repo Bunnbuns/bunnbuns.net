@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale = 1" />
+ <link rel="apple-touch-icon" sizes="57x57" href="/logo/apple-icon-57x57.png"> <link rel="apple-touch-icon" sizes="60x60" href="/logo/apple-icon-60x60.png"> <link rel="apple-touch-icon" sizes="72x72" href="/logo/apple-icon-72x72.png"> <link rel="apple-touch-icon" sizes="76x76" href="/logo/apple-icon-76x76.png"> <link rel="apple-touch-icon" sizes="114x114" href="/logo/apple-icon-114x114.png"> <link rel="apple-touch-icon" sizes="120x120" href="/logo/apple-icon-120x120.png"> <link rel="apple-touch-icon" sizes="144x144" href="/logo/apple-icon-144x144.png"> <link rel="apple-touch-icon" sizes="152x152" href="/logo/apple-icon-152x152.png"> <link rel="apple-touch-icon" sizes="180x180" href="/logo/apple-icon-180x180.png"> <link rel="icon" type="image/png" sizes="192x192" href="/logo/android-icon-192x192.png"> <link rel="icon" type="image/png" sizes="32x32" href="/logo/favicon-32x32.png"> <link rel="icon" type="image/png" sizes="96x96" href="/logo/favicon-96x96.png"> <link rel="icon" type="image/png" sizes="16x16" href="/logo/favicon-16x16.png"> <link rel="manifest" href="/logo/manifest.json"> <meta name="msapplication-TileColor" content="#ffffff"> <meta name="msapplication-TileImage" content="/logo/ms-icon-144x144.png"> <meta name="theme-color" content="#ffffff">
+  <title>MC stuff - Bunnbuns.net</title>
+    <meta name="description" content="Ben Border's website. Bunnbuns & Ben co. (c) 2018.">
+  <meta name="keywords" content="Bunnbuns, Bunnbuns.net, Bunnbuns & Ben, Ben Border">
+     <meta name="author" content="Ben Border">
+<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+<link href="/css/main.css" rel="stylesheet">
+<style>
+    .hero{
+        background-image: url(https://bunnbuns.net/mc/images/highway.png)
+    }
+</style>
+</head>
+<body>
+<div style="min-height: 100vh;">
+<nav>
+  <div class="items">
+<a class="brand" href="https://bunnbuns.net">Bunnbuns.net</a> <a class="item" href="/">Home</a><a class="item" href="/help/">Help</a><a class="item" href="http://bunnbuns.github.io">GitHub</a>
+  </div>
+ 
+</nav>
+<div class="hero">
+  <span>MC stuff</span>
+</div>
+<div class="content">
+        <div id="status">Loading...</div>
+  <center>
+  <h2 class="title">Bunnbuns Land</h2>
+      <h4 class="heading">A private Minecraft server for friends n stuff.</h4>
+    <div class="btn-area flat green">
+      <a href="http://bunnbuns.net:8123" class="btn flat green" title="World Map">World Map</a>
+    </div>
+      <br />
+  </center>
+</div>
+<br /><br />
+    
+</div>
+<footer>
+  <p>Bunnbuns & Ben co. 2019</p>
+  <p></p>
+  <small>
+  <a href="http://status.bunnbuns.net">Status</a> | 
+  <a href="http://bunnbuns.net:8080">OneServer</a> | 
+  <a href="#">About</a>
+  </small>
+</footer>
+<script>
+window.onload = function(){
+    
+    var getMC = new XMLHttpRequest;
+    getMC.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var tmp = getMC.responseText;
+            document.getElementById('status').innerHTML = tmp;
+        }
+        
+    };
+    getMC.open("GET", "https://bunnbuns.net/mc/status.phpj", true);
+    getMC.send();       
+}
+</script>
+</body>

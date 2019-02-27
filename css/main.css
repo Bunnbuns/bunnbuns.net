@@ -16,6 +16,12 @@ a{
 .body-padding{
     padding:8px;
 }
+.hr{
+    margin:1rem 1rem;
+    display: block;
+    height: 1px;
+    background-color: rgba(0,0,0,.12);
+}
 nav{
   z-index:10000;
   background-color:rgba(0,0,0,0.8);
@@ -61,7 +67,7 @@ nav .item:hover{
 }
 .hero{
   background-color:#42A5F5;
-  background-image:url(/background.jpg);
+  background-image:url(https://bunnbuns.net/background.jpg);
   background-size:cover;
   background-position:center;
   font-family: "Quicksand", sans-serif;
@@ -79,7 +85,7 @@ nav .item:hover{
   text-shadow:-1px 1px 12px rgba(0,0,0,0.6);
 }
 .title{
-  margin:1.5rem 6px 1.5rem 6px;
+  margin:1.5rem 6px 1rem 6px;
   font-family: "Quicksand", sans-serif;
   color:rgba(0,0,0,.85);
   font-weight:600;
@@ -89,6 +95,18 @@ nav .item:hover{
   font-family: "Quicksand", sans-serif;
   color:rgba(0,0,0,.8);
   font-weight:600;
+}
+.sub-heading{
+  margin:.25rem 0 .75rem 0;
+  font-family: "Quicksand", sans-serif;
+  color:rgba(0,0,0,.765);
+  font-weight:500;
+}
+.margin-1{
+  margin-top:1.5rem;
+}
+.margin-b{
+  margin-bottom:1.5rem;
 }
 .btn-area{
   padding: 1.75rem 1rem;
@@ -260,6 +278,10 @@ nav .item:hover{
   color:#FFFFFF;
   background-color: #ea9f11;
 }
+.stuff{
+  font-family: "Quicksand", sans-serif;
+  padding:0 0 .5rem 0;
+}
 /* -- footer -- */
 footer{
   text-align: center;
@@ -271,11 +293,14 @@ footer{
   font-weight: 600;
 }
 footer a{
-  color:rgba(0,0,0,0.53);
+  font-family: IBMPlexSans, Helvetica Neue, Segoe UI, Helvetica, Verdana, Arial, sans-serif;
+  color:rgba(0,0,0,0.42);
+  font-weight:400;
 }
 footer a:hover{
   color:rgba(0,0,0,0.63);
 }
+
 
 
 
