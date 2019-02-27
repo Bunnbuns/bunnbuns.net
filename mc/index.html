@@ -91,6 +91,7 @@ if (this.readyState == 4 && this.status == 200) {
 
 // --- Functions --- //
 function updateMC(){
+    document.getElementById('mc-banner').innerHTML = '<center><div class="lds-ellipsis green"><div></div><div></div><div></div><div></div></div></center>';
     getMC.open("GET", "https://bunnbuns.net/mc/mc-ping.php", true);
     getMC.send();
 }
