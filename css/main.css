@@ -155,6 +155,7 @@ nav .item:hover{
   color:#FFFFFF;
   text-decoration:none;
   border-radius:3px;
+  border: 0;
   -webkit-transition: box-shadow .2s;
   transition: box-shadow .2s;
 }
