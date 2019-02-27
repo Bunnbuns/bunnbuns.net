@@ -3,16 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale = 1" />
- <link rel="apple-touch-icon" sizes="57x57" href="/logo/apple-icon-57x57.png"> <link rel="apple-touch-icon" sizes="60x60" href="/logo/apple-icon-60x60.png"> <link rel="apple-touch-icon" sizes="72x72" href="/logo/apple-icon-72x72.png"> <link rel="apple-touch-icon" sizes="76x76" href="/logo/apple-icon-76x76.png"> <link rel="apple-touch-icon" sizes="114x114" href="/logo/apple-icon-114x114.png"> <link rel="apple-touch-icon" sizes="120x120" href="/logo/apple-icon-120x120.png"> <link rel="apple-touch-icon" sizes="144x144" href="/logo/apple-icon-144x144.png"> <link rel="apple-touch-icon" sizes="152x152" href="/logo/apple-icon-152x152.png"> <link rel="apple-touch-icon" sizes="180x180" href="/logo/apple-icon-180x180.png"> <link rel="icon" type="image/png" sizes="192x192" href="/logo/android-icon-192x192.png"> <link rel="icon" type="image/png" sizes="32x32" href="/logo/favicon-32x32.png"> <link rel="icon" type="image/png" sizes="96x96" href="/logo/favicon-96x96.png"> <link rel="icon" type="image/png" sizes="16x16" href="/logo/favicon-16x16.png"> <link rel="manifest" href="/logo/manifest.json"> <meta name="msapplication-TileColor" content="#ffffff"> <meta name="msapplication-TileImage" content="/logo/ms-icon-144x144.png"> <meta name="theme-color" content="#ffffff">
-  <title>MC stuff - Bunnbuns.net</title>
+<link rel="apple-touch-icon" sizes="57x57" href="/mc/logo/apple-icon-57x57.png"> <link rel="apple-touch-icon" sizes="60x60" href="/mc/logo/apple-icon-60x60.png"> <link rel="apple-touch-icon" sizes="72x72" href="/mc/logo/apple-icon-72x72.png"> <link rel="apple-touch-icon" sizes="76x76" href="/mc/logo/apple-icon-76x76.png"> <link rel="apple-touch-icon" sizes="114x114" href="/mc/logo/apple-icon-114x114.png"> <link rel="apple-touch-icon" sizes="120x120" href="/mc/logo/apple-icon-120x120.png"> <link rel="apple-touch-icon" sizes="144x144" href="/mc/logo/apple-icon-144x144.png"> <link rel="apple-touch-icon" sizes="152x152" href="/mc/logo/apple-icon-152x152.png"> <link rel="apple-touch-icon" sizes="180x180" href="/mc/logo/apple-icon-180x180.png"> <link rel="icon" type="image/png" sizes="192x192" href="/mc/logo/android-icon-192x192.png"> <link rel="icon" type="image/png" sizes="32x32" href="/mc/logo/favicon-32x32.png"> <link rel="icon" type="image/png" sizes="96x96" href="/mc/logo/favicon-96x96.png"> <link rel="icon" type="image/png" sizes="16x16" href="/mc/logo/favicon-16x16.png"> <link rel="manifest" href="/mc/logo/manifest.json"> <meta name="msapplication-TileColor" content="#ffffff"> <meta name="msapplication-TileImage" content="/mc/logo/ms-icon-144x144.png"> <meta name="theme-color" content="#ffffff">
+  <title>Minecraft stuff - Bunnbuns.net</title>
     <meta name="description" content="Ben Border's website. Bunnbuns & Ben co. (c) 2018.">
   <meta name="keywords" content="Bunnbuns, Bunnbuns.net, Bunnbuns & Ben, Ben Border">
      <meta name="author" content="Ben Border">
 <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 <link href="/css/main.css" rel="stylesheet">
+<link href="/css/loading.css" rel="stylesheet">
 <style>
     .hero{
         background-image: url(https://bunnbuns.net/mc/images/highway.png)
+    }
+    #status{
+        font-family: "Quicksand", sans-serif;
+        font-weight: 600;
     }
 </style>
 </head>
@@ -28,7 +33,7 @@
   <span>MC stuff</span>
 </div>
 <div class="content">
-        <div id="status">Loading...</div>
+        <div id="status"><center><div style="text-align: center; padding:5px 0 5px 0;color:#ffffff;font-weight:600;background-color:#388e3cdb;width:100%;">????</div></center></div>
   <center>
   <h2 class="title">Bunnbuns Land</h2>
       <h4 class="heading">A private Minecraft server for friends n stuff.</h4>
@@ -36,6 +41,7 @@
       <a href="http://bunnbuns.net:8123" class="btn flat green" title="World Map">World Map</a>
     </div>
       <br />
+      <div id="mc-banner"><center><div class="lds-ellipsis green"><div></div><div></div><div></div><div></div></div></center></div>
   </center>
 </div>
 <br /><br />
@@ -52,17 +58,41 @@
 </footer>
 <script>
 window.onload = function(){
+
+    getStatus.open("GET", "https://bunnbuns.net/mc/status.php", true);
+    getStatus.send();
     
-    var getMC = new XMLHttpRequest;
-    getMC.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            var tmp = getMC.responseText;
-            document.getElementById('status').innerHTML = tmp;
-        }
-        
-    };
-    getMC.open("GET", "https://bunnbuns.net/mc/status.phpj", true);
-    getMC.send();       
+
+    getMC.open("GET", "https://bunnbuns.net/mc/mc-ping.php", true);
+    getMC.send();
+
+    // update status banner every 2 secs //
+    setInterval(function() {
+        getStatus.open("GET", "https://bunnbuns.net/mc/status.php", true);
+        getStatus.send();
+    }, 2000);
+}
+// Get status banner //
+var getStatus = new XMLHttpRequest;
+getStatus.onreadystatechange = function() {
+if (this.readyState == 4 && this.status == 200) {
+    var tmp = getStatus.responseText;
+    document.getElementById('status').innerHTML = tmp;
+    }     
+};
+// Get mc-banner //
+var getMC = new XMLHttpRequest;
+getMC.onreadystatechange = function() {
+if (this.readyState == 4 && this.status == 200) {
+    var tmp = JSON.parse(getMC.responseText);
+    document.getElementById('mc-banner').innerHTML = tmp.players+" players <br />"+tmp.motd+"<br />"+tmp.version+'<br /><br /><button class="btn" onClick="updateMC()">Refresh</button>';
+    }       
+};
+
+// --- Functions --- //
+function updateMC(){
+    getMC.open("GET", "https://bunnbuns.net/mc/mc-ping.php", true);
+    getMC.send();
 }
 </script>
 </body>
