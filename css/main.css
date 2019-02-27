@@ -76,7 +76,7 @@ nav .item:hover{
   text-shadow:-1px 1px 12px rgba(0,0,0,0.6);
 }
 .title{
-  margin:1.5rem 6px 1rem 6px;
+  margin:1.5rem 6px 1.5rem 6px;
   font-family: "Quicksand", sans-serif;
   color:rgba(0,0,0,.85);
   font-weight:600;
@@ -84,7 +84,7 @@ nav .item:hover{
 .heading{
   margin:.75rem 0 .75rem 0;
   font-family: "Quicksand", sans-serif;
-  color:rgba(0,0,0,.78);
+  color:rgba(0,0,0,.8);
   font-weight:600;
 }
 .btn-area{
@@ -109,6 +109,9 @@ nav .item:hover{
   color:#FFFFFF;
 }
 /*-- btn area flat --*/
+.btn-area.flat{
+  padding: 1.25rem 1rem;
+}
 .btn-area.flat.green{
   background-color:#FFFFFF;
   color:#a7d222;
