@@ -237,7 +237,7 @@ window.onload = function(){
     loadMCBanner();
     // update status banner every 2 secs //
     setInterval(function() {
-        getStatus.open("GET", "https://bunnbuns.net/mc/status.php", true);
+        getStatus.open("GET", "https://bunnbuns.net/mc/mc-status.php", true);
         getStatus.send();
     }, 2000);
     
@@ -278,7 +278,7 @@ if (this.readyState == 4 && this.status == 200) {
 // --- Functions --- //
 function loadMCBanner(){
     document.getElementById('mc-banner').innerHTML = '<center><div class="lds-ellipsis white"><div></div><div></div><div></div><div></div></div></center>';
-    getStatus.open("GET", "https://bunnbuns.net/mc/status.php", true);
+    getStatus.open("GET", "https://bunnbuns.net/mc/mc-status.php", true);
     getStatus.send();
     getMC.open("GET", "https://bunnbuns.net/mc/mc-ping.php", true);
     getMC.send();
