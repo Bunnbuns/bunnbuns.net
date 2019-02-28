@@ -88,12 +88,24 @@
         display: inline-block;
         vertical-align: middle;
     }
-    #mc-banner .ping-badge{
+    #mc-banner .ping-badge.great{
         background: url(https://bunnbuns.net/mc/images/icons.png) 0px 239px;
         left: 0;
         height: 8px;
         width: 8px;
         display:inline-block;
+        -ms-transform: scale(2.5, 2.5);
+        -webkit-transform: scale(2.5, 2.5);
+        transform: scale(2.5, 2.5);
+        image-rendering: pixelated;
+        margin: 0 5px 0 0;
+    }
+    #mc-banner .ping-badge.bad{
+        background: url(https://bunnbuns.net/mc/images/icons.png) 0px 200px;
+        left: 0;
+        height: 8px;
+        width: 8px;
+        display: inline-block;
         -ms-transform: scale(2.5, 2.5);
         -webkit-transform: scale(2.5, 2.5);
         transform: scale(2.5, 2.5);
@@ -174,7 +186,7 @@
   <span>MC stuff</span>
 </div>
 <div class="content">
-        <div id="status"><center><div style="text-align: center; padding:5px 0 5px 0;color:#ffffff;font-weight:600;background-color:#388e3cdb;width:100%;">????</div></center></div>
+        <div id="status"><center><div style="text-align: center; padding:5px 0 5px 0;color:#ffffff;font-weight:600;background-color:#f3d713db;width:100%;">Loading...</div></center></div>
   <center>
   <h2 class="title">Bunnbuns Land</h2>
       <h4 class="heading">A private Minecraft server for friends n stuff.</h4>
@@ -230,8 +242,15 @@ if (this.readyState == 4 && this.status == 200) {
 var getMC = new XMLHttpRequest;
 getMC.onreadystatechange = function() {
 if (this.readyState == 4 && this.status == 200) {
+    var tmp = false;
     var tmp = JSON.parse(getMC.responseText);
-    document.getElementById('mc-banner').innerHTML = '<div class="mc-top"> <img src="https://bunnbuns.net/mc/logo.png"> <span class="mc-sub-top"> <span class="mc-title">Bunnbuns Land</span> <span class="mc-header">'+tmp.motd+'</span> </span> </div> <h4 id="playercount"> <div style="display:inline;margin: 0 5px 0 0;"> <span style="color:#AAAAAA;">'+tmp.players+'</span> <span style="color:#555555;">/</span> <span style="color:#AAAAAA;">'+tmp.max_players+'</span> </div> <span class="couponcode"> <div class="ping-badge great"> </div></span> </h4> <div style="margin:0 0 5px 0;"> <h4 style="margin:1rem 0">Players Online:</h4> <span id="playerlist">Loading...</span> </div> <br /> <div id="refresh" class="mc-button" style="image-rendering: pixelated;" onclick="loadMCBanner()"> <span style="font-family: Minecraft, sans-serif;">Refresh</span> </div>';
+    if(tmp.online == false){
+        console.log(tmp);
+        document.getElementById('mc-banner').innerHTML = '<div class="mc-top"> <img src="https://bunnbuns.net/mc/logo.png"> <span class="mc-sub-top"> <span class="mc-title">Bunnbuns Land</span> <span class="mc-header" style="color:#AA0000;">Can\'t connect to server</span> </span> </div> <h4 id="playercount"> <div style="display:inline;margin: 0 5px 0 0;"> <span style="color:#AAAAAA;"></span> <span style="color:#555555;"></span> <span style="color:#AAAAAA;"></span> </div> <span class="couponcode"> <div class="ping-badge bad"> </div></span> </h4> <div style="margin:0 0 5px 0;"> <h4 style="margin:1rem 0">Players Online:</h4> <span id="playerlist">Loading...</span> </div> <br /> <div id="refresh" class="mc-button" style="image-rendering: pixelated;" onclick="loadMCBanner()"> <span style="font-family: Minecraft, sans-serif;">Refresh</span> </div>'; 
+    }else{
+        console.log(tmp);
+        document.getElementById('mc-banner').innerHTML = '<div class="mc-top"> <img src="'+tmp.favicon+'"> <span class="mc-sub-top"> <span class="mc-title">Bunnbuns Land</span> <span class="mc-header">'+tmp.motd+'</span> </span> </div> <h4 id="playercount"> <div style="display:inline;margin: 0 5px 0 0;"> <span style="color:#AAAAAA;">'+tmp.players+'</span> <span style="color:#555555;">/</span> <span style="color:#AAAAAA;">'+tmp.max_players+'</span> </div> <span class="couponcode"> <div class="ping-badge great"> </div></span> </h4> <div style="margin:0 0 5px 0;"> <h4 style="margin:1rem 0">Players Online:</h4> <span id="playerlist">Loading...</span> </div> <br /> <div id="refresh" class="mc-button" style="image-rendering: pixelated;" onclick="loadMCBanner()"> <span style="font-family: Minecraft, sans-serif;">Refresh</span> </div>';
+    }
     getPlayerlist();
     }
 };
@@ -262,7 +281,7 @@ function getPlayerlist(){
         };
         playerList.open("GET", "https://bunnbuns.net/mc/mc-playerlist.php", true);
         playerList.send();   
-    }, 250);
+    }, 350);
 }
 function updateMC(){
     document.getElementById('mc-banner').innerHTML = '<center><div class="lds-ellipsis white"><div></div><div></div><div></div><div></div></div></center>';
