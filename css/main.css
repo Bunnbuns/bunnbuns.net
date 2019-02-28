@@ -16,6 +16,9 @@ a{
 .body-padding{
     padding:8px;
 }
+p{
+    font-family: "Quicksand", sans-serif;
+}
 .hr{
     margin:1rem 1rem;
     display: block;
@@ -259,9 +262,14 @@ nav .item:hover{
 .btn.outline:hover{
   box-shadow:1px 1px 8px rgba(0,0,0,0.35);
 }
-/* -- small btn --*/
+/* -- other btn sizes --*/
 .btn.small{
   padding:4px 8px;
+  font-size: inherit;
+  font-weight: 500;
+}
+.btn.big{
+  padding: 11px 20px;
   font-size: inherit;
   font-weight: 500;
 }
