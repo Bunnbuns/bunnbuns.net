@@ -305,11 +305,50 @@ footer a:hover{
   color:rgba(0,0,0,0.63);
 }
 
+/* -- container -- */
+.big-container:after {
+    clear: both
+}
+.big-container-fluid {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px
+}
+.big-container-fluid:after,.big-container-fluid:before {
+    content: " ";
+    display: table
+}
+.big-container-fluid:after {
+    clear: both
+}
 
 
 
 
 /* --- Media Stuff ---*/
+@media (min-width: 1200px) {
+    .big-container {
+        max-width:1170px
+    }
+}
+@media (min-width: 992px) {
+    .big-container {
+        max-width:960px
+    }
+}
+@media (min-width: 768px) {
+    .big-container {
+        max-width:740px
+    }
+}
+@media (min-width: 544px) {
+    .big-container {
+        max-width:570px
+    }
+}
 @media screen and (max-width: 455px){
   .btn{
     padding:8px 14px;

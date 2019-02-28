@@ -11,7 +11,6 @@
 <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 <link href="/css/main.css" rel="stylesheet">
 <link href="/css/loading.css" rel="stylesheet">
-<link href="/css/mc-banner.css" rel="stylesheet">
 <style>
     .hero{
         background-image: url(https://bunnbuns.net/mc/images/highway.png)
@@ -20,6 +19,15 @@
         font-family: "Quicksand", sans-serif;
         font-weight: 600;
     }
+    .panel {
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 0;
+        background-color: #FFF;
+        -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,.16), 0 0 2px 0 rgba(0,0,0,.12);
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,.16), 0 0 2px 0 rgba(0,0,0,.12);
+    }
+    /*  mc-banner */
     @font-face {
         font-family: "Minecraft";
         font-style: normal;
@@ -28,6 +36,129 @@
              url("https://bunnbuns.net/mc/fonts/minecraft_font.woff") format("woff"), 
              url("https://bunnbuns.net/mc/fonts/minecraft_font.ttf") format("truetype"), 
              url("https://bunnbuns.net/mc/fonts/minecraft_font.svg#Minecraft") format("svg");
+    }
+    #mc-banner{
+        text-align: left;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 0;
+        background-color: #FFF;
+        -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,.16), 0 0 2px 0 rgba(0,0,0,.12);
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,.16), 0 0 2px 0 rgba(0,0,0,.12);
+        font-family: Minecraft, sans-serif;
+        margin: auto;
+        margin-right:8px;
+        margin-left:8px;
+        color: white;
+        background: url(images/dirt.png) repeat;
+        background-size: 64px;
+        background-color: #18100A;
+    }
+    #mc-banner .mc-top{
+        display: inline-block;
+        vertical-align: middle;
+        text-overflow: ellipsis;
+        max-width: 100%;
+    }
+    #mc-banner .mc-sub-top{
+        display: inline-block;
+        vertical-align: top;
+        margin-left:.5rem;
+        margin:-2px 0 0 .5rem;
+    }
+    #mc-banner:after {
+        clear: both;
+    }
+    #mc-banner .mc-title{
+        font-family: Minecraft, sans-serif;
+        display: inline-block;
+        vertical-align: middle;
+        margin:0 0 .35rem 0;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    #mc-banner .mc-header{
+        font-family: Minecraft, sans-serif;
+        color: #808080;
+        display: block;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    #mc-banner .mc-top img{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    #mc-banner .ping-badge{
+        background: url(https://bunnbuns.net/mc/images/icons.png) 0px 239px;
+        left: 0;
+        height: 8px;
+        width: 8px;
+        display:inline-block;
+        -ms-transform: scale(2.5, 2.5);
+        -webkit-transform: scale(2.5, 2.5);
+        transform: scale(2.5, 2.5);
+        image-rendering: pixelated;
+        margin: 0 5px 0 0;
+    }
+    .mc-button {
+      height: 40px;
+      width: 135px;
+      outline: 2px solid black;
+      margin: 0;
+      display: block;
+      background-image: url('/mc/images/button_center.png');
+      background-repeat: repeat;
+      padding: 0;
+      font-family: Minecraft;
+      text-align: center;
+      color: white;
+      text-shadow: 2px 2px #3F3F28;
+      border-bottom: 4px solid #565656;
+      border-right: 2px solid #565656;
+      border-left: 2px solid #AAA;
+      border-top: 2px solid #AAA;
+      box-sizing: border-box;
+      font-size: 16px;
+      text-decoration:none;
+      background-color:#6D6D6D;
+      -webkit-user-select: none;
+    }
+
+    .mc-button span {
+      position: relative;
+      line-height: 40px;
+      bottom: 3px;
+      text-decoration:none;
+    }
+
+    .mc-button:hover {
+      border-bottom: 4px solid #59639A;
+      border-right: 2px solid #59639A;
+      border-left: 2px solid #BDC6FF;
+      border-top: 2px solid #BDC6FF;
+      background-image: url('/mc/images/button_active_center.png');
+      color: #FFFFA0;
+      text-decoration:none;
+      background-color:#7C86BE;
+    }
+    #playercount{
+        float:right;
+        display:inline;
+        margin:-2px 0 0 0;
+    }
+    .mc-tooltip {
+        text-shadow: 0.1em 0.1em #333;
+        display: inline-block;
+        font-family: Minecraft;
+        color: #fff;
+        background-color: #110210;
+        border: 4px solid;
+        border-image: url(/mc/images/mc-tooltip-border-12x12.png) 4 repeat;
+        padding: 3px 4px 4px 4px;
+        background-clip: padding-box;
+    }
+    #playerlist{
+        color:#808080;
     }
 </style>
 </head>
@@ -51,11 +182,17 @@
       <a href="http://bunnbuns.net:8123" class="btn flat green" title="World Map">World Map</a>
     </div>
       <br />
-      <div id="mc-banner" style="font-family: Minecraft;"><center><div class="lds-ellipsis green"><div></div><div></div><div></div><div></div></div></center></div>
-      
+
+    <div class="mc-banner">
+        <div id="mc-banner" class="big-container mc-banner">
+            <center><div class="lds-ellipsis white"><div></div><div></div><div></div><div></div></div></center>
+        </div>
+    </div>
       
       
   </center>
+
+
 </div>
 <br /><br />
     
@@ -70,20 +207,15 @@
   </small>
 </footer>
 <script>
+// Window load //
 window.onload = function(){
-
-    getStatus.open("GET", "https://bunnbuns.net/mc/status.php", true);
-    getStatus.send();
-    
-
-    getMC.open("GET", "https://bunnbuns.net/mc/mc-ping.php", true);
-    getMC.send();
-
+    loadMCBanner();
     // update status banner every 2 secs //
     setInterval(function() {
         getStatus.open("GET", "https://bunnbuns.net/mc/status.php", true);
         getStatus.send();
     }, 2000);
+    
 }
 // Get status banner //
 var getStatus = new XMLHttpRequest;
@@ -93,20 +225,51 @@ if (this.readyState == 4 && this.status == 200) {
     document.getElementById('status').innerHTML = tmp;
     }     
 };
+
 // Get mc-banner //
 var getMC = new XMLHttpRequest;
 getMC.onreadystatechange = function() {
 if (this.readyState == 4 && this.status == 200) {
     var tmp = JSON.parse(getMC.responseText);
-    document.getElementById('mc-banner').innerHTML = tmp.players+" players <br />"+tmp.motd+"<br />"+tmp.version+'<br /><br /><button class="btn" onClick="updateMC()">Refresh</button>';
-    }       
+    document.getElementById('mc-banner').innerHTML = '<div class="mc-top"> <img src="https://bunnbuns.net/mc/logo.png"> <span class="mc-sub-top"> <span class="mc-title">Bunnbuns Land</span> <span class="mc-header">'+tmp.motd+'</span> </span> </div> <h4 id="playercount"> <div style="display:inline;margin: 0 5px 0 0;"> <span style="color:#AAAAAA;">'+tmp.players+'</span> <span style="color:#555555;">/</span> <span style="color:#AAAAAA;">'+tmp.max_players+'</span> </div> <span class="couponcode"> <div class="ping-badge great"> </div></span> </h4> <div style="margin:0 0 5px 0;"> <h4 style="margin:1rem 0">Players Online:</h4> <span id="playerlist">Loading...</span> </div> <br /> <div id="refresh" class="mc-button" style="image-rendering: pixelated;" onclick="loadMCBanner()"> <span style="font-family: Minecraft, sans-serif;">Refresh</span> </div>';
+    getPlayerlist();
+    }
 };
 
+var playerList = new XMLHttpRequest;
+playerList.onreadystatechange = function() {
+if (this.readyState == 4 && this.status == 200) {
+    var tmp = playerList.responseText;
+    document.getElementById('playerlist').innerHTML = tmp;
+    }  
+};
 // --- Functions --- //
-function updateMC(){
-    document.getElementById('mc-banner').innerHTML = '<center><div class="lds-ellipsis green"><div></div><div></div><div></div><div></div></div></center>';
+function loadMCBanner(){
+    document.getElementById('mc-banner').innerHTML = '<center><div class="lds-ellipsis white"><div></div><div></div><div></div><div></div></div></center>';
+    getStatus.open("GET", "https://bunnbuns.net/mc/status.php", true);
+    getStatus.send();
     getMC.open("GET", "https://bunnbuns.net/mc/mc-ping.php", true);
     getMC.send();
+}
+function getPlayerlist(){
+    setTimeout(function(){
+        var playerList = new XMLHttpRequest;
+        playerList.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var tmp = playerList.responseText;
+            document.getElementById('playerlist').innerHTML = tmp;
+            } 
+        };
+        playerList.open("GET", "https://bunnbuns.net/mc/mc-playerlist.php", true);
+        playerList.send();   
+    }, 250);
+}
+function updateMC(){
+    document.getElementById('mc-banner').innerHTML = '<center><div class="lds-ellipsis white"><div></div><div></div><div></div><div></div></div></center>';
+    getMC.open("GET", "https://bunnbuns.net/mc/status.php", true);
+    getMC.send();
+    getPlayerlist.open("GET", "https://bunnbuns.net/mc/mc-playerlist.php", true);
+    getPlayerlist.send();
 }
 </script>
 </body>
