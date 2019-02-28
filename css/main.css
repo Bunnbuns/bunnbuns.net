@@ -18,6 +18,8 @@ a{
 }
 p{
     font-family: "Quicksand", sans-serif;
+    margin-left:8px;
+    margin-right:8px;
 }
 .hr{
     margin:1rem 1rem;
