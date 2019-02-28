@@ -53,6 +53,7 @@
         background: url(images/dirt.png) repeat;
         background-size: 64px;
         background-color: #18100A;
+        position: relative;
     }
     #mc-banner .mc-top{
         display: inline-block;
@@ -157,6 +158,8 @@
         float:right;
         display:inline;
         margin:-2px 0 0 0;
+        position: absolute;
+        right: 15px;
     }
     .mc-tooltip {
         text-shadow: 0.1em 0.1em #333;
@@ -249,7 +252,7 @@ if (this.readyState == 4 && this.status == 200) {
         document.getElementById('mc-banner').innerHTML = '<div class="mc-top"> <img src="https://bunnbuns.net/mc/logo.png"> <span class="mc-sub-top"> <span class="mc-title">Bunnbuns Land</span> <span class="mc-header" style="color:#AA0000;">Can\'t connect to server</span> </span> </div> <h4 id="playercount"> <div style="display:inline;margin: 0 5px 0 0;"> <span style="color:#AAAAAA;"></span> <span style="color:#555555;"></span> <span style="color:#AAAAAA;"></span> </div> <span class="couponcode"> <div class="ping-badge bad"> </div></span> </h4> <div style="margin:0 0 5px 0;"> <h4 style="margin:1rem 0">Players Online:</h4> <span id="playerlist">Loading...</span> </div> <br /> <div id="refresh" class="mc-button" style="image-rendering: pixelated;" onclick="loadMCBanner()"> <span style="font-family: Minecraft, sans-serif;">Refresh</span> </div>'; 
     }else{
         console.log(tmp);
-        document.getElementById('mc-banner').innerHTML = '<div class="mc-top"> <img src="'+tmp.favicon+'"> <span class="mc-sub-top"> <span class="mc-title">Bunnbuns Land</span> <span class="mc-header">'+tmp.motd+'</span> </span> </div> <h4 id="playercount"> <div style="display:inline;margin: 0 5px 0 0;"> <span style="color:#AAAAAA;">'+tmp.players+'</span> <span style="color:#555555;">/</span> <span style="color:#AAAAAA;">'+tmp.max_players+'</span> </div> <span class="couponcode"> <div class="ping-badge great"> </div></span> </h4> <div style="margin:0 0 5px 0;"> <h4 style="margin:1rem 0">Players Online:</h4> <span id="playerlist">Loading...</span> </div> <br /> <div id="refresh" class="mc-button" style="image-rendering: pixelated;" onclick="loadMCBanner()"> <span style="font-family: Minecraft, sans-serif;">Refresh</span> </div>';
+        document.getElementById('mc-banner').innerHTML = '<div class="mc-top"> <img src="'+tmp.favicon+'"> <span class="mc-sub-top"> <span class="mc-title">Bunnbuns.net</span> <span class="mc-header">'+tmp.motd+'</span> </span> </div> <h4 id="playercount"> <div style="display:inline;margin: 0 5px 0 0;"> <span style="color:#AAAAAA;">'+tmp.players+'</span> <span style="color:#555555;">/</span> <span style="color:#AAAAAA;">'+tmp.max_players+'</span> </div> <span class="couponcode"> <div class="ping-badge great"> </div></span> </h4> <div style="margin:0 0 5px 0;"> <h4 style="margin:1rem 0">Players Online:</h4> <span id="playerlist">Loading...</span> </div> <br /> <div id="refresh" class="mc-button" style="image-rendering: pixelated;" onclick="loadMCBanner()"> <span style="font-family: Minecraft, sans-serif;">Refresh</span> </div>';
     }
     getPlayerlist();
     }
