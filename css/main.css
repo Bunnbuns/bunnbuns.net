@@ -154,6 +154,7 @@ nav .item:hover{
 }
 /* -- btn --*/
 .btn{
+  font-family: IBMPlexSans, Helvetica Neue, Segoe UI, Helvetica, Verdana, Arial, sans-serif;
   padding:8px 16px;
   background-color: #42A5F5;
   font-weight:500;
