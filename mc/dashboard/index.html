@@ -4,16 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale = 1" />
 <link rel="apple-touch-icon" sizes="57x57" href="/mc/logo/apple-icon-57x57.png"> <link rel="apple-touch-icon" sizes="60x60" href="/mc/logo/apple-icon-60x60.png"> <link rel="apple-touch-icon" sizes="72x72" href="/mc/logo/apple-icon-72x72.png"> <link rel="apple-touch-icon" sizes="76x76" href="/mc/logo/apple-icon-76x76.png"> <link rel="apple-touch-icon" sizes="114x114" href="/mc/logo/apple-icon-114x114.png"> <link rel="apple-touch-icon" sizes="120x120" href="/mc/logo/apple-icon-120x120.png"> <link rel="apple-touch-icon" sizes="144x144" href="/mc/logo/apple-icon-144x144.png"> <link rel="apple-touch-icon" sizes="152x152" href="/mc/logo/apple-icon-152x152.png"> <link rel="apple-touch-icon" sizes="180x180" href="/mc/logo/apple-icon-180x180.png"> <link rel="icon" type="image/png" sizes="192x192" href="/mc/logo/android-icon-192x192.png"> <link rel="icon" type="image/png" sizes="32x32" href="/mc/logo/favicon-32x32.png"> <link rel="icon" type="image/png" sizes="96x96" href="/mc/logo/favicon-96x96.png"> <link rel="icon" type="image/png" sizes="16x16" href="/mc/logo/favicon-16x16.png"> <link rel="manifest" href="/mc/logo/manifest.json"> <meta name="msapplication-TileColor" content="#ffffff"> <meta name="msapplication-TileImage" content="/mc/logo/ms-icon-144x144.png"> <meta name="theme-color" content="#ffffff">
-  <title>Minecraft stuff - Bunnbuns.net</title>
-    <meta name="description" content="Ben Border's website. Bunnbuns & Ben co. (c) 2018.">
-  <meta name="keywords" content="Bunnbuns, Bunnbuns.net, Bunnbuns & Ben, Ben Border">
-     <meta name="author" content="Ben Border">
+  <title>Minecraft Dashboard - Bunnbuns.net</title>
 <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 <link href="/css/main.css" rel="stylesheet">
 <link href="/css/loading.css" rel="stylesheet">
 <style>
+    body{
+        background: url(/mc/images/dirt.png) repeat;
+        background-size: 64px;
+        background-color: #18100A;
+    }
     .hero{
-        background-image: url(https://bunnbuns.net/mc/images/highway.png)
+        background-image: url(https://bunnbuns.net/mc/images/cell-tower.png)
     }
     #status{
         font-family: "Quicksand", sans-serif;
@@ -46,16 +48,17 @@
         margin-bottom: 20px;
         border-radius: 0;
         background-color: #FFF;
-        -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,.16), 0 0 2px 0 rgba(0,0,0,.12);
-        box-shadow: 0 2px 2px 0 rgba(0,0,0,.16), 0 0 2px 0 rgba(0,0,0,.12);
+        /*-webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,.16), 0 0 2px 0 rgba(0,0,0,.12);
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,.16), 0 0 2px 0 rgba(0,0,0,.12);*/
         font-family: Minecraft, sans-serif;
         margin: auto;
-        margin-right:8px;
-        margin-left:8px;
+        /*margin-right:8px;
+        margin-left:8px;*/
         color: white;
-        background: url(images/dirt.png) repeat;
+        background-color:transparent;
+        /*background: url(images/dirt.png) repeat;
         background-size: 64px;
-        background-color: #18100A;
+        background-color: #18100A;*/
         position: relative;
     }
     .mc-banner-in .mc-top{
@@ -94,7 +97,7 @@
         vertical-align: middle;
     }
     .mc-banner-in .ping-badge.great{
-        background: url(/mc/images/icons.png) 0px 239px;
+        background: url(https://bunnbuns.net/mc/images/icons.png) 0px 239px;
         left: 0;
         height: 8px;
         width: 8px;
@@ -106,7 +109,7 @@
         margin: 0 5px 0 0;
     }
     .mc-banner-in .ping-badge.bad{
-        background: url(/mc/images/icons.png) 0px 200px;
+        background: url(https://bunnbuns.net/mc/images/icons.png) 0px 200px;
         left: 0;
         height: 8px;
         width: 8px;
@@ -179,91 +182,66 @@
     #playerlist{
         color:#808080;
     }
+    .mc-top-header{
+        height: 7.75rem;
+        background: url(https://bunnbuns.net/mc/images/dirt-light.png) repeat;
+        box-shadow: 0px 5px 25px 3px rgba(0,0,0,0.9);
+        background-size: 64px;
+    }
+    .mc-top-header .mc-button{
+        margin-top:3.25rem;
+    }
+    .mc-bottom-header{
+        padding:.9rem 0;
+        background: url(https://bunnbuns.net/mc/images/dirt-light.png) repeat;
+        box-shadow: 0px -5px 25px -3px rgba(0,0,0,0.9);
+        background-size: 64px;
+    }
 </style>
 </head>
 <body>
-<div style="min-height: 100vh;">
+<div style="min-height: 86vh;">
 <nav>
   <div class="items">
 <a class="brand" href="https://bunnbuns.net">Bunnbuns.net</a> <a class="item" href="/">Home</a><a class="item" href="/help/">Help</a><a class="item" href="http://bunnbuns.github.io">GitHub</a>
   </div>
  
 </nav>
-<div class="hero">
-  <span>Minecraft Stuff</span>
-</div>
+    <div class="mc-top-header">
+        <center>
+          <div class="mc-banner-in big-container">
+            <a href="/mc/" class="mc-button" style="image-rendering: pixelated;"> <span style="font-family: Minecraft, sans-serif;">Back</span> </a>
+      </div>
+        </center>
+    </div>
 <div class="content">
-        <div id="status"><center><div style="text-align: center; padding:5px 0 5px 0;color:#ffffff;font-weight:600;background-color:#f3d713db;width:100%;" title="Status for Bunnbuns Land">Loading...</div></center></div>
   <center>
-  <h1 class="title">Bunnbuns Land</h1>
-        <p>A private Minecraft server for friends n stuff.</p>
-    <div class="btn-area flat green">
-      <a href="http://bunnbuns.net:8123" class="btn big flat green" title="World Map">World Map</a>
-    </div>
-      <br />
-
+      <p></p>
+      <!-- mc-banner #1 -->
     <div class="mc-banner">
-        <div id="mc-banner" class="big-container mc-banner-in">
+        <div id="mc-banner" class="mc-banner-in big-container">
             <center><div class="lds-ellipsis white"><div></div><div></div><div></div><div></div></div></center>
         </div>
     </div>
-      
-    <br />
-    <div class="info-area">
-        <h1>Want to join?</h1>
-        <p>Keep in mind that this is a private Minecraft server. Only contact if you know me personally.</p>
-        <div class="btn-area big flat">
-        <a class="btn outline green" href="mailto:ben@bunnbuns.net?subject=Bunnbuns%20Land%20Minecraft%20server&body=I%20have%20an%20interest%20in%20joining%20Bunnbuns%20Land..." title="Email Ben">Email</a>
-        </div>
-    </div>
-
-      <br /><br />
-      <div class="hr"></div>
-    <h1 class="title">Other Servers</h1>
-      <!--<p>Another pivate server but more survival</p>-->
-      <p>Here are some more servers I own.</p>
-      <div class="btn-area flat brown">
-    <a href="http://bunnbuns.net:25596" class="btn big flat brown" title="World Map">World Map</a>
-      </div>
-      
       <!-- mc-banner #2 -->
-      <br />
     <div class="mc-banner">
-        <div id="mc-banner2" class="big-container mc-banner-in">
+        <div id="mc-banner2" class="mc-banner-in big-container">
             <center><div class="lds-ellipsis white"><div></div><div></div><div></div><div></div></div></center>
         </div>
     </div>
     <br />
-    <div class="info-area">
-        <h1>Want to join?</h1>
-        <p>This is an invite only server. If you know me, ask me.</p>
-    </div>
-      <br /><br />
-      
-      <div class="hr"></div>
-      <br />
-    <h1 class="title">Moded Clients</h1>
-      <p>I do not condone using one on a server, but...</p>
-    <div class="btn-area flat blue">
-        <a class="btn outline blue" href="https://aristois.net/">Aristois (free)</a><span> | </span>
-        <a class="btn outline blue" href="https://www.futureclient.net/">Future Client ($20)</a>
-    </div>
-      
-      <br /><br />
-      <div class="hr">
-          <br /><br />
-        <div class="btn-area flat gray">
-            <a class="btn outline gray" href="dashboard/">MC Dashboard</a>
-        </div>
-      </div>
+
   </center>
 
 
 </div>
-<br /><br />
-    
-</div>
-<footer>
+</div><!-- end min height -->
+    <div class="mc-bottom-header">
+        <div class="mc-banner-in big-container">
+            <div id="refresh" class="mc-button" style="image-rendering: pixelated;" onclick="loadMCBanner();loadMCBanner2();"> <span style="font-family: Minecraft, sans-serif;">Refresh</span> </div>
+        </div>
+    </div>
+<!--<footer>
   <p>Bunnbuns & Ben co. 2019</p>
   <p></p>
   <small>
@@ -271,27 +249,27 @@
   <a href="http://bunnbuns.net:8080">OneServer</a> | 
   <a href="#">About</a>
   </small>
-</footer>
+</footer>-->
 <script>
 // Window load //
 window.onload = function(){
     loadMCBanner();
     loadMCBanner2();
     // update status banner every 2 secs //
-    setInterval(function() {
-        getStatus.open("GET", "https://bunnbuns.net/mc/mc-status.php", true);
-        getStatus.send();
-    }, 2000);
+//    setInterval(function() {
+//        getStatus.open("GET", "https://bunnbuns.net/mc/mc-status.php", true);
+//        getStatus.send();
+//    }, 2000);
     
 }
-// Get status banner //
-var getStatus = new XMLHttpRequest;
-getStatus.onreadystatechange = function() {
-if (this.readyState == 4 && this.status == 200) {
-    var tmp = getStatus.responseText;
-    document.getElementById('status').innerHTML = tmp;
-    }     
-};
+//// Get status banner //
+//var getStatus = new XMLHttpRequest;
+//getStatus.onreadystatechange = function() {
+//if (this.readyState == 4 && this.status == 200) {
+//    var tmp = getStatus.responseText;
+//    document.getElementById('status').innerHTML = tmp;
+//    }     
+//};
 
 // Get mc-banner //
 var getMC = new XMLHttpRequest;
@@ -301,10 +279,10 @@ if (this.readyState == 4 && this.status == 200) {
     var tmp = JSON.parse(getMC.responseText);
     if(tmp.version == null){
         console.log(tmp);
-        document.getElementById('mc-banner').innerHTML = '<div class="mc-top"> <img src="https://bunnbuns.net/mc/logo.png"> <span class="mc-sub-top"> <span class="mc-title">Bunnbuns Land</span> <span class="mc-header" style="color:#AA0000;">Can\'t connect to server</span> </span> </div> <h4 id="playercount"> <div style="display:inline;margin: 0 5px 0 0;"> <span style="color:#AAAAAA;"></span> <span style="color:#555555;"></span> <span style="color:#AAAAAA;"></span> </div> <span class="couponcode"> <div class="ping-badge bad"> </div></span> </h4> <div style="margin:0 0 5px 0;"> <h4 style="margin:1rem 0">Players Online:</h4> <span id="playerlist">Loading...</span> </div> <br /> <div id="refresh" class="mc-button" style="image-rendering: pixelated;" onclick="loadMCBanner()"> <span style="font-family: Minecraft, sans-serif;">Refresh</span> </div>'; 
+        document.getElementById('mc-banner').innerHTML = '<div class="mc-top"> <img src="https://bunnbuns.net/mc/logo.png"> <span class="mc-sub-top"> <span class="mc-title">Bunnbuns Land</span> <span class="mc-header" style="color:#AA0000;">Can\'t connect to server</span> </span> </div> <h4 id="playercount"> <div style="display:inline;margin: 0 5px 0 0;"> <span style="color:#AAAAAA;"></span> <span style="color:#555555;"></span> <span style="color:#AAAAAA;"></span> </div> <span class="couponcode"> <div class="ping-badge bad"> </div></span> </h4> <div style="margin:0 0 5px 0;"> <h4 style="margin:1rem 0">Players Online:</h4> <span id="playerlist">Loading...</span> </div>'; 
     }else{
         console.log(tmp);
-        document.getElementById('mc-banner').innerHTML = '<div class="mc-top"> <img src="'+tmp.favicon+'"> <span class="mc-sub-top"> <span class="mc-title">Bunnbuns.net</span> <span class="mc-header">'+tmp.motd+'</span> </span> </div> <h4 id="playercount"> <div style="display:inline;margin: 0 5px 0 0;"> <span style="color:#AAAAAA;">'+tmp.players+'</span> <span style="color:#555555;">/</span> <span style="color:#AAAAAA;">'+tmp.max_players+'</span> </div> <span class="couponcode"> <div class="ping-badge great"> </div></span> </h4> <div style="margin:0 0 5px 0;"> <h4 style="margin:1rem 0">Players Online:</h4> <span id="playerlist">Loading...</span> </div> <br /> <div id="refresh" class="mc-button" style="image-rendering: pixelated;" onclick="loadMCBanner()"> <span style="font-family: Minecraft, sans-serif;">Refresh</span> </div>';
+        document.getElementById('mc-banner').innerHTML = '<div class="mc-top"> <img src="'+tmp.favicon+'"> <span class="mc-sub-top"> <span class="mc-title">Bunnbuns.net</span> <span class="mc-header">'+tmp.motd+'</span> </span> </div> <h4 id="playercount"> <div style="display:inline;margin: 0 5px 0 0;"> <span style="color:#AAAAAA;">'+tmp.players+'</span> <span style="color:#555555;">/</span> <span style="color:#AAAAAA;">'+tmp.max_players+'</span> </div> <span class="couponcode"> <div class="ping-badge great"> </div></span> </h4> <div style="margin:0 0 5px 0;"> <h4 style="margin:1rem 0">Players Online:</h4> <span id="playerlist">Loading...</span> </div>';
     }
     getPlayerlist();
     }
@@ -316,10 +294,10 @@ if (this.readyState == 4 && this.status == 200) {
     var tmp = JSON.parse(getMC2.responseText);
     if(tmp.version == null){
         console.log(tmp);
-        document.getElementById('mc-banner2').innerHTML = '<div class="mc-top"> <img src="https://bunnbuns.net/mc/seed/logo.png"> <span class="mc-sub-top"> <span class="mc-title">Bunnbuns Land</span> <span class="mc-header" style="color:#AA0000;">Can\'t connect to server</span> </span> </div> <h4 id="playercount"> <div style="display:inline;margin: 0 5px 0 0;"> <span style="color:#AAAAAA;"></span> <span style="color:#555555;"></span> <span style="color:#AAAAAA;"></span> </div> <span class="couponcode"> <div class="ping-badge bad"> </div></span> </h4> <div style="margin:0 0 5px 0;"> <h4 style="margin:1rem 0">Players Online:</h4> <span id="playerlist2">Loading...</span> </div> <br /> <div id="refresh" class="mc-button" style="image-rendering: pixelated;" onclick="loadMCBanner2()"> <span style="font-family: Minecraft, sans-serif;">Refresh</span> </div>'; 
+        document.getElementById('mc-banner2').innerHTML = '<div class="mc-top"> <img src="https://bunnbuns.net/mc/seed/logo.png"> <span class="mc-sub-top"> <span class="mc-title">Bunnbuns Land</span> <span class="mc-header" style="color:#AA0000;">Can\'t connect to server</span> </span> </div> <h4 id="playercount"> <div style="display:inline;margin: 0 5px 0 0;"> <span style="color:#AAAAAA;"></span> <span style="color:#555555;"></span> <span style="color:#AAAAAA;"></span> </div> <span class="couponcode"> <div class="ping-badge bad"> </div></span> </h4> <div style="margin:0 0 5px 0;"> <h4 style="margin:1rem 0">Players Online:</h4> <span id="playerlist2">Loading...</span> </div>'; 
     }else{
         console.log(tmp);
-        document.getElementById('mc-banner2').innerHTML = '<div class="mc-top"> <img src="'+tmp.favicon+'"> <span class="mc-sub-top"> <span class="mc-title">Bunnbuns.net</span> <span class="mc-header">'+tmp.motd+'</span> </span> </div> <h4 id="playercount"> <div style="display:inline;margin: 0 5px 0 0;"> <span style="color:#AAAAAA;">'+tmp.players+'</span> <span style="color:#555555;">/</span> <span style="color:#AAAAAA;">'+tmp.max_players+'</span> </div> <span class="couponcode"> <div class="ping-badge great"> </div></span> </h4> <div style="margin:0 0 5px 0;"> <h4 style="margin:1rem 0">Players Online:</h4> <span id="playerlist2">Loading...</span> </div> <br /> <div id="refresh" class="mc-button" style="image-rendering: pixelated;" onclick="loadMCBanner2()"> <span style="font-family: Minecraft, sans-serif;">Refresh</span> </div>';
+        document.getElementById('mc-banner2').innerHTML = '<div class="mc-top"> <img src="'+tmp.favicon+'"> <span class="mc-sub-top"> <span class="mc-title">Bunnbuns.net</span> <span class="mc-header">'+tmp.motd+'</span> </span> </div> <h4 id="playercount"> <div style="display:inline;margin: 0 5px 0 0;"> <span style="color:#AAAAAA;">'+tmp.players+'</span> <span style="color:#555555;">/</span> <span style="color:#AAAAAA;">'+tmp.max_players+'</span> </div> <span class="couponcode"> <div class="ping-badge great"> </div></span> </h4> <div style="margin:0 0 5px 0;"> <h4 style="margin:1rem 0">Players Online:</h4> <span id="playerlist2">Loading...</span> </div>';
     }
     getPlayerlist2();
     }
@@ -342,8 +320,8 @@ if (this.readyState == 4 && this.status == 200) {
 // --- Functions --- //
 function loadMCBanner(){
     document.getElementById('mc-banner').innerHTML = '<center><div class="lds-ellipsis white"><div></div><div></div><div></div><div></div></div></center>';
-    getStatus.open("GET", "https://bunnbuns.net/mc/mc-status.php", true);
-    getStatus.send();
+//    getStatus.open("GET", "https://bunnbuns.net/mc/mc-status.php", true);
+//    getStatus.send();
     getMC.open("GET", "https://bunnbuns.net/mc/mc-ping.php", true);
     getMC.send();
 }
@@ -380,8 +358,8 @@ function getPlayerlist2(){
 }
 function updateMC(){
     document.getElementById('mc-banner').innerHTML = '<center><div class="lds-ellipsis white"><div></div><div></div><div></div><div></div></div></center>';
-    getMC.open("GET", "https://bunnbuns.net/mc/status.php", true);
-    getMC.send();
+//    getMC.open("GET", "https://bunnbuns.net/mc/status.php", true);
+//    getMC.send();
     getPlayerlist.open("GET", "https://bunnbuns.net/mc/mc-playerlist.php", true);
     getPlayerlist.send();
 }
