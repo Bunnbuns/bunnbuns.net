@@ -244,6 +244,12 @@
             <center><div class="lds-ellipsis white"><div></div><div></div><div></div><div></div></div></center>
         </div>
     </div>
+      <!-- mc-banner #3 -->
+    <div class="mc-banner">
+        <div id="mc-banner3" class="mc-banner-in big-container">
+            <center><div class="lds-ellipsis white"><div></div><div></div><div></div><div></div></div></center>
+        </div>
+    </div>
     <br />
 
   </center>
@@ -253,7 +259,7 @@
 </div><!-- end min height -->
     <div class="mc-bottom-header">
         <div class="mc-banner-in big-container">
-            <div id="refresh" class="mc-button" style="image-rendering: pixelated;" onclick="loadMCBanner();loadMCBanner2();"> <span style="font-family: Minecraft, sans-serif;">Refresh</span> </div>
+            <div id="refresh" class="mc-button" style="image-rendering: pixelated;" onclick="loadMCBanner();loadMCBanner2();loadMCBanner3();"> <span style="font-family: Minecraft, sans-serif;">Refresh</span> </div>
         </div>
     </div>
 <script>
@@ -261,6 +267,7 @@
 window.onload = function(){
     loadMCBanner();
     loadMCBanner2();
+    loadMCBanner3();
 };
 var hoverEffect = false;
 // -- Show favicon overlay -- //
@@ -317,6 +324,22 @@ if (this.readyState == 4 && this.status == 200) {
     getPlayerlist2();
     }
 };
+// Get mc-banner 3 //
+var getMC3 = new XMLHttpRequest;
+getMC3.onreadystatechange = function() {
+if (this.readyState == 4 && this.status == 200) {
+    var tmp = null;
+    var tmp = JSON.parse(getMC3.responseText);
+    if(tmp.version == null){
+        console.log(tmp);
+        document.getElementById('mc-banner3').innerHTML = '<div onmouseover="showFaviconOverlay(3)" onmouseout="hideFaviconOverlay(3)"><div class="mc-top"> <div class="mc-favicon-top" id="fav-3" style="display:none;" onmouseover="showFaviconOverlay(3, 1)" onmouseout="hideFaviconOverlay(3, 1)"></div><img src="https://bunnbuns.net/mc/plainworld.png"> <span class="mc-sub-top"> <span class="mc-title">Bunnbuns.net</span> <span class="mc-header"><span style="color:#AA0000;">Can\'t connect to server</span></span> </span> </div> <h4 id="playercount"> <div style="display:inline;margin: 0 5px 0 0;"> </div> <span class="couponcode"> <div class="ping-badge bad"> </div></span> </h4> </div><div style="margin:0 0 5px 0;"> <h4 style="margin:1rem 0">Players Online:</h4> <span id="playerlist3">Loading...</span> </div>'; 
+    }else{
+        console.log(tmp);
+        document.getElementById('mc-banner3').innerHTML = '<div onmouseover="showFaviconOverlay(3)" onmouseout="hideFaviconOverlay(3)"><div class="mc-top"> <div class="mc-favicon-top" id="fav-3" style="display:none;" onmouseover="showFaviconOverlay(3, 1)" onmouseout="hideFaviconOverlay(3, 1)"></div><img src="'+tmp.favicon+'"> <span class="mc-sub-top"> <span class="mc-title">Bunnbuns.net</span> <span class="mc-header">'+tmp.motd+'</span> </span> </div> <h4 id="playercount"> <div style="display:inline;margin: 0 5px 0 0;"> <span style="color:#AAAAAA;">'+tmp.players+'</span> <span style="color:#555555;">/</span> <span style="color:#AAAAAA;">'+tmp.max_players+'</span> </div> <span class="couponcode"> <div class="ping-badge great"> </div></span> </h4> </div><div style="margin:0 0 5px 0;"> <h4 style="margin:1rem 0">Players Online:</h4> <span id="playerlist3">Loading...</span> </div>';
+    }
+    getPlayerlist3();
+    }
+};
 function loadMCBanner(){
     document.getElementById('mc-banner1').innerHTML = '<center><div class="lds-ellipsis white"><div></div><div></div><div></div><div></div></div></center>';
     getMC.open("GET", "https://bunnbuns.net/mc/mc-ping.php", true);
@@ -326,6 +349,11 @@ function loadMCBanner2(){
     document.getElementById('mc-banner2').innerHTML = '<center><div class="lds-ellipsis white"><div></div><div></div><div></div><div></div></div></center>';
     getMC2.open("GET", "https://bunnbuns.net/mc/mc-ping2.php", true);
     getMC2.send();
+}
+function loadMCBanner3(){
+    document.getElementById('mc-banner3').innerHTML = '<center><div class="lds-ellipsis white"><div></div><div></div><div></div><div></div></div></center>';
+    getMC3.open("GET", "https://bunnbuns.net/mc/mc-ping3.php", true);
+    getMC3.send();
 }
 // Get player-list for mc-banner 1 //
 function getPlayerlist(){
@@ -353,6 +381,20 @@ function getPlayerlist2(){
         };
         playerList2.open("GET", "https://bunnbuns.net/mc/mc-playerlist2.php", true);
         playerList2.send();   
+    }, 350);
+}
+// Get player-list for mc-banner 3 //
+function getPlayerlist3(){
+    setTimeout(function(){
+        var playerList3 = new XMLHttpRequest;
+        playerList3.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var tmp = playerList3.responseText;
+            document.getElementById('playerlist3').innerHTML = tmp;
+            } 
+        };
+        playerList3.open("GET", "https://bunnbuns.net/mc/mc-playerlist3.php", true);
+        playerList3.send();   
     }, 350);
 }
 // after get player-list for mc-banner 1 //
