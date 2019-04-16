@@ -413,5 +413,13 @@ if (this.readyState == 4 && this.status == 200) {
     document.getElementById('playerlist2').innerHTML = tmp;
     }  
 };
+// after get player-list for mc-banner 3 //
+var playerList2 = new XMLHttpRequest;
+playerList3.onreadystatechange = function() {
+if (this.readyState == 4 && this.status == 200) {
+    var tmp = playerList3.responseText;
+    document.getElementById('playerlist3').innerHTML = tmp;
+    }  
+};
 </script>
 </body>
