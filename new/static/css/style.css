@@ -1,0 +1,106 @@
+/*
+#############
+Bunnbuns.net
+#############
+*/
+*{
+    font-family: sans-serif;
+}
+*, ::after, ::before{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+}
+img{
+   max-width: 100%; 
+}
+.h1, h1{
+    font-size: 2.5rem;
+}
+.h2, h2{
+    font-size: 2rem;
+}
+.h3, h3{
+    font-size: 1.75rem;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+h1, h2, h3, h4, h5, h6{
+    margin-top: 0;
+    margin-bottom: .5rem;
+}
+p{
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+.text-center{
+    text-align: center!important;
+}
+.container{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.jumbotron{
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-color: #49a04f;
+}
+.text-white{
+    color:white;
+}
+.margin-auto{
+    margin:auto;
+}
+.mt-small{
+    margin-top: .5rem;
+}
+.mt{
+    margin-top: 1rem;
+}
+.mt-large{
+    margin-top: 2rem;
+}
+.mb-small{
+    margin-bottom: .5rem;
+}
+.mb{
+    margin-bottom: .5rem;
+}
+.mb-large{
+    margin-bottom: 2rem;
+}
+.inline-b{
+    display: inline-block;
+}
+.block{
+    display: block;
+}
+.vam{
+    vertical-align: middle;
+}
+.text-left{
+    text-align: left;
+}
+.text-right{
+    text-align: right
+}
+.text-center{
+    text-align: center;
+}
+.page{
+    min-height: 100vh;
+}

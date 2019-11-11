@@ -1,0 +1,33 @@
+.jumbotron{
+    background: #49a04f url("https://bunnbuns.net/background-full.jpg") no-repeat center;
+    background-size: cover;
+    text-shadow: -1px 1px 12px rgba(0,0,0,0.75);
+}
+.main-hello{
+    background: #49a04f url("https://bunnbuns.net/background-profile.jpg") no-repeat center;
+    background-size: cover;
+    text-shadow: -1px 1px 12px rgba(0,0,0,0.75);
+    padding: 3.5rem 0;
+}
+.main-hello .pfp{
+    box-shadow: -1px 1px 8px rgba(0,0,0,0.66);;
+    display: inline-block;
+    vertical-align: middle;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: #7dc482;
+    margin-right: 8px;
+}
+.main-hello .info{
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+}
+.main-hello .info .text{
+    display: inline-block;
+    text-align: left;
+}
+.main-hello .info .sub-text{
+    text-align: left;
+}
