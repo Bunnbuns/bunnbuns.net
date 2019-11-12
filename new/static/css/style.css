@@ -1,6 +1,6 @@
 /*
 #############
-Bunnbuns.net
+Style.css
 #############
 */
 *{
@@ -40,12 +40,38 @@ h1, h2, h3, h4, h5, h6{
     margin-top: 0;
     margin-bottom: .5rem;
 }
-p{
-    margin-top: 0;
-    margin-bottom: 1rem;
+button, .button{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    align-items: center;
 }
-.text-center{
-    text-align: center!important;
+.button {
+    display: inline-block;
+    cursor: pointer;
+    justify-content: center;
+    padding-bottom: 0.375em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    padding-top: 0.375em;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: 5px;
+    margin-bottom: 6px;
+}
+.button.normal{
+    font-size: 1.1rem;
+}
+.button{
+    background-color: #d9d9d9;
+}
+.button:hover{
+    background-color: #e3e3e3;
+}
+.button.green{
+    background-color: #7ef284;
+}
+.button.green:hover{
+    background-color: #8bf791;
 }
 .container{
     width: 100%;
@@ -54,10 +80,13 @@ p{
     margin-right: auto;
     margin-left: auto;
 }
-.jumbotron{
-    padding: 2rem 1rem;
-    margin-bottom: 2rem;
-    background-color: #49a04f;
+/* margins & stuff */
+p{
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+.text-center{
+    text-align: center!important;
 }
 .text-white{
     color:white;
@@ -101,6 +130,12 @@ p{
 .text-center{
     text-align: center;
 }
+/* more */
 .page{
     min-height: 100vh;
+}
+.jumbotron{
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-color: #49a04f;
 }

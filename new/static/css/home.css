@@ -1,3 +1,8 @@
+/*
+#############
+Home.css
+#############
+*/
 .jumbotron{
     background: #49a04f url("https://bunnbuns.net/background-full.jpg") no-repeat center;
     background-size: cover;
@@ -30,4 +35,5 @@
 }
 .main-hello .info .sub-text{
     text-align: left;
+    font-size: 16px;
 }
