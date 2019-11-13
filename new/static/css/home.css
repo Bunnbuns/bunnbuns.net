@@ -4,7 +4,7 @@ Home.css
 #############
 */
 .jumbotron.full{
-    background: #49a04f url("https://bunnbuns.net/background-full.jpg") no-repeat center;
+    background: #49a04f url("https://bunnbuns.net/background.jpg") no-repeat center;
     background-size: cover;
     text-shadow: -1px 1px 12px rgba(0,0,0,0.75);
 }
