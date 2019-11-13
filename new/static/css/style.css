@@ -45,65 +45,6 @@ button, .button{
     -webkit-appearance: none;
     align-items: center;
 }
-/* buttons */
-.button {
-    display: inline-block;
-    cursor: pointer;
-    text-decoration: none;
-    justify-content: center;
-    padding-bottom: 0.375em;
-    padding-left: 0.75em;
-    padding-right: 0.75em;
-    padding-top: 0.375em;
-    text-align: center;
-    white-space: nowrap;
-    border-radius: 6px;
-    margin-bottom: 6px;
-}
-.button.normal{
-    font-size: 1.1rem;
-}
-.button{
-    background-color: #e3e3e3;
-}
-.button:hover{
-    background-color: #d9d9d9;
-}
-.button.green{
-    background-color: #49ac4d;
-    color: white;
-}
-.button.green:hover{
-    background-color: #439f47;
-    color: white;
-}
-.button.dark-green{
-    background-color: #247c28;
-    color: white;
-}
-.button.dark-green:hover{
-    background-color: #1f7123;
-    color: white;
-}
-.button.blue{
-    background-color: #3b61ff;
-    color: white;
-}
-.button.blue{
-    background-color: #3256ea;
-    color: white;
-}
-.button.red{
-    background-color: #ff4141;
-    color: white;
-}
-.button.red:hover{
-    background-color: #d93c3c;
-    color: white;
-}
-.button.big{
-    font-size: 1.35rem;
-}
 .container{
     width: 100%;
     padding-right: 15px;
@@ -113,6 +54,7 @@ button, .button{
 }
 /* margins & stuff */
 p{
+    font-size: 1.1rem;
     margin-top: 0;
     margin-bottom: 1rem;
 }
@@ -158,6 +100,89 @@ p{
 .text-center{
     text-align: center!important;
 }
+/* buttons */
+.button {
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    justify-content: center;
+    font-size: 1.15rem;
+    padding-bottom: 0.375em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    padding-top: 0.375em;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: 6px;
+    margin-bottom: 6px;
+}
+a.button{
+    color: #212529;
+}
+.button.small{
+    font-size: 1rem;
+}
+.button{
+    background-color: #e3e3e3;
+}
+.button:hover{
+    background-color: #d9d9d9;
+}
+.button.light-green, .jumbotron.light-green{
+    background-color: #c5ffc7;
+}
+.button.light-green:hover{
+    background-color: #b7f0b9;
+}
+.button.green, .jumbotron.green{
+    background-color: #49ac4d;
+    color: white;
+}
+.button.green:hover{
+    background-color: #439f47;
+    color: white;
+}
+.button.dark-green, .jumbotron.dark-green{
+    background-color: #247c28;
+    color: white;
+}
+.button.dark-green:hover{
+    background-color: #1f7123;
+    color: white;
+}
+.button.blue, .jumbotron.blue{
+    background-color: #3b61ff;
+    color: white;
+}
+.button.blue:hover{
+    background-color: #3256ea;
+    color: white;
+}
+.button.light-blue, .jumbotron.light-blue{
+    background-color: #a6b8ff;
+}
+.button.light-blue:hover{
+    background-color: #9caef2;
+}
+.button.dark-blue, .jumbotron.dark-blue{
+    background-color: #3d56b9;
+    color: white;
+}
+.button.dark-blue:hover{
+    background-color: #374faa;
+    color: white;
+}
+.button.red, .jumbotron.red{
+    background-color: #ff4141;
+    color: white;
+}
+.button.red:hover{
+    background-color: #d93c3c;
+    color: white;
+}
+.button.big{
+    font-size: 1.35rem;
+}
 /* more */
 .page{
     min-height: 100vh;
@@ -165,5 +190,5 @@ p{
 .jumbotron{
     padding: 2rem 1rem;
     margin-bottom: 2rem;
-    background-color: #49a04f;
+    background-color: #e6e6e6;
 }
