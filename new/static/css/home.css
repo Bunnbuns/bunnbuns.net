@@ -11,7 +11,7 @@ Home.css
 .main-hello{
     background: #49a04f url("https://bunnbuns.net/background-profile-2.jpg") no-repeat center;
     background-size: cover;
-    padding: 3.5rem 0 3rem 0;
+    padding: 3.5rem 0 2.85rem 0;
     transition: all 0.2s;
 }
 .main-hello .pfp{
@@ -23,6 +23,7 @@ Home.css
     border-radius: 50%;
     background-color: #7dc482;
     margin-right: 8px;
+    margin-bottom: 1rem;
 }
 .main-hello .info{
     text-shadow: -1px 1px 12px rgba(0,0,0,0.75);
@@ -57,7 +58,7 @@ Home.css
     color:rgba(255, 255, 255, 0.9);
     text-shadow: -1px 1px 8px rgba(0,0,0,0.66);
     font-size: 1.2rem;
-    margin: 2rem 0 .25rem 0;
+    margin: 1rem 0 .25rem 0;
 }
 .main-hello .socials-more{
     display: block;

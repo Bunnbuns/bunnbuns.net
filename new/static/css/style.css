@@ -49,6 +49,7 @@ button, .button{
 .button {
     display: inline-block;
     cursor: pointer;
+    text-decoration: none;
     justify-content: center;
     padding-bottom: 0.375em;
     padding-left: 0.75em;
@@ -56,27 +57,52 @@ button, .button{
     padding-top: 0.375em;
     text-align: center;
     white-space: nowrap;
-    border-radius: 5px;
+    border-radius: 6px;
     margin-bottom: 6px;
 }
 .button.normal{
     font-size: 1.1rem;
 }
 .button{
-    background-color: #d9d9d9;
-}
-.button:hover{
     background-color: #e3e3e3;
 }
+.button:hover{
+    background-color: #d9d9d9;
+}
 .button.green{
-    background-color: #7ef284;
+    background-color: #49ac4d;
+    color: white;
 }
 .button.green:hover{
-    background-color: #8bf791;
+    background-color: #439f47;
+    color: white;
+}
+.button.dark-green{
+    background-color: #247c28;
+    color: white;
+}
+.button.dark-green:hover{
+    background-color: #1f7123;
+    color: white;
+}
+.button.blue{
+    background-color: #3b61ff;
+    color: white;
+}
+.button.blue{
+    background-color: #3256ea;
+    color: white;
+}
+.button.red{
+    background-color: #ff4141;
+    color: white;
+}
+.button.red:hover{
+    background-color: #d93c3c;
+    color: white;
 }
 .button.big{
-    padding:1rem 1.5rem;
-    font-size: 1.5rem;
+    font-size: 1.35rem;
 }
 .container{
     width: 100%;
