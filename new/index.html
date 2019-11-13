@@ -10,7 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <!-- CSS -->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
         <link rel="stylesheet" href="static/css/style.css">
         <link rel="stylesheet" href="static/css/home.css">
         
@@ -27,6 +27,41 @@
                             <h1 class="text">Ben Border</h1>
                             <span class="sub-text block">A human + web developer.</span>
                         </span>
+                        <div class="at">@Bunnbuns</div>
+                        <div class="social">
+                            <a class="btn" href="https://github.com/Bunnbuns"
+                               title="GitHub"><i class="fa fa-github"></i></a>
+                            <a class="btn" href="https://www.youtube.com/channel/UCDAn1lrGCqxBss6HK8VY_lQ/videos?"
+                               title="YouTube"><i class="fa fa-youtube-play"></i></a>
+                            <a class="btn" href="https://www.instagram.com/bunnbuns_and_ben/"
+                               title="Instagram"><i class="fa fa-instagram"></i></a>
+                            <a class="btn" href="https://keybase.io/bunnbuns"
+                               title="Keybase"><i class="fa fa-keybase"></i></a>
+                            <a class="btn" href="https://www.linkedin.com/in/ben-border/"
+                               title="LinkedIn"><i class="fa fa-linkedin-square"></i></a>
+                        </div>
+                        
+                        <a id="moreSocialsLink" class="social-more" href="#" onclick="moreSocials()">More</a>
+                        
+                        <div id="moreSocial" style="display: none;">
+                            <a class="btn" href="https://open.spotify.com/user/bunnbuns"
+                               title="Spotify"><i class="fa fa-spotify"></i></a>
+                            <a class="btn" href="https://discordapp.com/users/237359484488384512"
+                               title="Discord"><i class="fa fa-discord-alt"></i></a>
+                            <a class="btn" href="https://twitter.com/BunnbunsAndBen"
+                               title="Twitter"><i class="fa fa-twitter"></i></a>
+                            <a class="btn" href="https://codepen.io/Bunnbuns/"
+                               title="CodePen"><i class="fa fa-codepen"></i></a>
+                            <a class="btn" href="https://soundcloud.com/bunnbuns"
+                               title="Soundcloud"><i class="fa fa-soundcloud"></i></a>
+                            
+                            <div>
+                                <a class="btn" href="https://scratch.mit.edu/users/Bunnbuns/"
+                               title="Scratch">Scratch</a>
+                                <a class="btn" href="https://stibarc.com/user.html?id=Bunnbuns"
+                               title="STiBaRC">STiBaRC</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -34,9 +69,8 @@
             <center>
                 <br>
                 
-                <div class="button normal green">GitHub</div>
-                <br>
-                <div class="button normal green">Cool</div>
+                <div class="button big">GitHub</div>
+                <div class="button big">Cool</div>
             </center>
 
             <br><br><br><br>
@@ -50,5 +84,11 @@
             </div>
         </div>
         
+        <script>
+            function moreSocials(){
+                document.getElementById("moreSocialsLink").style.display = "none";
+                document.getElementById("moreSocial").style.display = "block";
+            }
+        </script>
     </body>
 </html>

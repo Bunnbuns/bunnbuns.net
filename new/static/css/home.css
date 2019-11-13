@@ -9,13 +9,13 @@ Home.css
     text-shadow: -1px 1px 12px rgba(0,0,0,0.75);
 }
 .main-hello{
-    background: #49a04f url("https://bunnbuns.net/background-profile.jpg") no-repeat center;
+    background: #49a04f url("https://bunnbuns.net/background-profile-2.jpg") no-repeat center;
     background-size: cover;
-    text-shadow: -1px 1px 12px rgba(0,0,0,0.75);
     padding: 3.5rem 0;
+    transition: all 0.2s;
 }
 .main-hello .pfp{
-    box-shadow: -1px 1px 8px rgba(0,0,0,0.66);;
+    box-shadow: -1px 1px 8px rgba(0,0,0,0.66);
     display: inline-block;
     vertical-align: middle;
     height: 150px;
@@ -25,6 +25,7 @@ Home.css
     margin-right: 8px;
 }
 .main-hello .info{
+    text-shadow: -1px 1px 12px rgba(0,0,0,0.75);
     display: inline-block;
     vertical-align: middle;
     text-align: left;
@@ -32,8 +33,39 @@ Home.css
 .main-hello .info .text{
     display: inline-block;
     text-align: left;
+    font-size: 2.5rem;
 }
 .main-hello .info .sub-text{
     text-align: left;
-    font-size: 16px;
+    font-size: 1rem;
 }
+.main-hello .social{
+    margin:.5rem 0 0 0;
+}
+.main-hello a{
+    color: white;
+}
+.main-hello .btn{
+    display: inline-block;
+    text-shadow: -1px 1px 8px rgba(0,0,0,0.66);
+    margin:4px 4px;
+}
+.main-hello .btn i{
+    font-size: 2.75rem;
+}
+.main-hello .at{
+    color:rgba(255, 255, 255, 0.9);
+    text-shadow: -1px 1px 8px rgba(0,0,0,0.66);
+    font-size: 1.2rem;
+    margin: 2rem 0 .25rem 0;
+}
+.main-hello .social-more{
+    display: block;
+    margin-top: .25rem;
+    color:rgba(255, 255, 255, 0.55);
+}
+
+
+/*
+Mobile stuff
+*/

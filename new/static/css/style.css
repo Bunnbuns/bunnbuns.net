@@ -45,6 +45,7 @@ button, .button{
     -webkit-appearance: none;
     align-items: center;
 }
+/* buttons */
 .button {
     display: inline-block;
     cursor: pointer;
@@ -72,6 +73,10 @@ button, .button{
 }
 .button.green:hover{
     background-color: #8bf791;
+}
+.button.big{
+    padding:1rem 1.5rem;
+    font-size: 1.5rem;
 }
 .container{
     width: 100%;
