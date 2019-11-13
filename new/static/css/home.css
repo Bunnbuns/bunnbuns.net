@@ -61,7 +61,7 @@ Home.css
     margin: 1rem 0 .25rem 0;
 }
 .main-hello .socials-more{
-    display: block;
+    display: inline-block;
     margin-top: .25rem;
     color:rgba(255, 255, 255, 0.6);
     text-decoration: none;
