@@ -30,38 +30,41 @@
                         <div class="at">@Bunnbuns</div>
                         <div class="social">
                             <a class="btn" href="https://github.com/Bunnbuns"
-                               title="GitHub"><i class="fa fa-github"></i></a>
-                            <a class="btn" href="https://www.youtube.com/channel/UCDAn1lrGCqxBss6HK8VY_lQ/videos?"
-                               title="YouTube"><i class="fa fa-youtube-play"></i></a>
+                               title="GitHub" target="_blank"><i class="fa fa-github"></i></a>
+                            <a class="btn" href="https://www.youtube.com/channel/UCDAn1lrGCqxBss6HK8VY_lQ/"
+                               title="YouTube" target="_blank"><i class="fa fa-youtube-play"></i></a>
                             <a class="btn" href="https://www.instagram.com/bunnbuns_and_ben/"
-                               title="Instagram"><i class="fa fa-instagram"></i></a>
+                               title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a>
                             <a class="btn" href="https://keybase.io/bunnbuns"
-                               title="Keybase"><i class="fa fa-keybase"></i></a>
+                               title="Keybase" target="_blank"><i class="fa fa-keybase"></i></a>
                             <a class="btn" href="https://www.linkedin.com/in/ben-border/"
-                               title="LinkedIn"><i class="fa fa-linkedin-square"></i></a>
+                               title="LinkedIn" target="_blank"><i class="fa fa-linkedin-square"></i></a>
                         </div>
                         
-                        <a id="moreSocialsLink" class="social-more" href="#" onclick="moreSocials()">More</a>
-                        
-                        <div id="moreSocial" style="display: none;">
+                        <div id="moreSocials" style="display: none;">
                             <a class="btn" href="https://open.spotify.com/user/bunnbuns"
-                               title="Spotify"><i class="fa fa-spotify"></i></a>
+                               title="Spotify" target="_blank"><i class="fa fa-spotify"></i></a>
                             <a class="btn" href="https://discordapp.com/users/237359484488384512"
-                               title="Discord"><i class="fa fa-discord-alt"></i></a>
+                               title="Discord" target="_blank"><i class="fa fa-discord-alt"></i></a>
                             <a class="btn" href="https://twitter.com/BunnbunsAndBen"
-                               title="Twitter"><i class="fa fa-twitter"></i></a>
+                               title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
                             <a class="btn" href="https://codepen.io/Bunnbuns/"
-                               title="CodePen"><i class="fa fa-codepen"></i></a>
+                               title="CodePen" target="_blank"><i class="fa fa-codepen"></i></a>
                             <a class="btn" href="https://soundcloud.com/bunnbuns"
-                               title="Soundcloud"><i class="fa fa-soundcloud"></i></a>
+                               title="Soundcloud" target="_blank"><i class="fa fa-soundcloud"></i></a>
                             
                             <div>
+                                <a class="btn" href="https://panzoid.com/users/Bunnbuns_Ben_co"
+                               title="Scratch" target="_blank">Panzoid</a>
                                 <a class="btn" href="https://scratch.mit.edu/users/Bunnbuns/"
-                               title="Scratch">Scratch</a>
+                               title="Scratch" target="_blank">Scratch</a>
                                 <a class="btn" href="https://stibarc.com/user.html?id=Bunnbuns"
-                               title="STiBaRC">STiBaRC</a>
+                               title="STiBaRC" target="_blank">STiBaRC</a>
                             </div>
                         </div>
+                        
+                        <a id="moreSocialsLink" class="socials-more" href="#" onclick="moreSocials()" style="display: block;">More <i class="fa fa-caret-down"></i></a>
+                        
                     </div>
                 </div>
             </div>
@@ -85,9 +88,17 @@
         </div>
         
         <script>
+            var moreSocialsDisplay = 0;
             function moreSocials(){
-                document.getElementById("moreSocialsLink").style.display = "none";
-                document.getElementById("moreSocial").style.display = "block";
+                if(moreSocialsDisplay == 0){
+                    moreSocialsDisplay = 1;
+                    document.getElementById("moreSocials").style.display = "block";
+                    document.getElementById("moreSocialsLink").innerHTML = 'Less <i class="fa fa-caret-up"></i>';
+                }else if(moreSocialsDisplay == 1){
+                    moreSocialsDisplay = 0;
+                    document.getElementById("moreSocials").style.display = "none";
+                    document.getElementById("moreSocialsLink").innerHTML = 'More <i class="fa fa-caret-down"></i>';
+                }
             }
         </script>
     </body>

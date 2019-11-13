@@ -11,7 +11,7 @@ Home.css
 .main-hello{
     background: #49a04f url("https://bunnbuns.net/background-profile-2.jpg") no-repeat center;
     background-size: cover;
-    padding: 3.5rem 0;
+    padding: 3.5rem 0 3rem 0;
     transition: all 0.2s;
 }
 .main-hello .pfp{
@@ -59,10 +59,11 @@ Home.css
     font-size: 1.2rem;
     margin: 2rem 0 .25rem 0;
 }
-.main-hello .social-more{
+.main-hello .socials-more{
     display: block;
     margin-top: .25rem;
-    color:rgba(255, 255, 255, 0.55);
+    color:rgba(255, 255, 255, 0.6);
+    text-decoration: none;
 }
 
 
