@@ -137,13 +137,53 @@ a.button{
     background-color: #d9d9d9;
     box-shadow: -1px 1px 6px rgba(0,0,0,0.46);
 }
-.button.light-green, .jumbotron.light-green{
-    background-color: #c5ffc7;
+.jumbotron.green{
+    background: rgb(73,172,77);
+    background: -moz-linear-gradient(155deg, rgba(73,172,77,1) 0%, rgba(67,159,71,1) 100%);
+    background: -webkit-linear-gradient(155deg, rgba(73,172,77,1) 0%, rgba(67,159,71,1) 100%);
+    background: linear-gradient(155deg, rgba(73,172,77,1) 0%, rgba(67,159,71,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#49ac4d",endColorstr="#439f47",GradientType=1);
+    color: white;
 }
-.button.light-green:hover{
-    background-color: #b7f0b9;
+.jumbotron.light-green{
+    background: rgb(204,255,206);
+    background: -moz-linear-gradient(155deg, rgba(204,255,206,1) 0%, rgba(164,236,166,1) 100%);
+    background: -webkit-linear-gradient(155deg, rgba(204,255,206,1) 0%, rgba(164,236,166,1) 100%);
+    background: linear-gradient(155deg, rgba(204,255,206,1) 0%, rgba(164,236,166,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ccffce",endColorstr="#a4eca6",GradientType=1);
 }
-.button.green, .jumbotron.green{
+.jumbotron.dark-green{
+    background: rgb(36,124,40);
+    background: -moz-linear-gradient(155deg, rgba(36,124,40,1) 0%, rgba(20,101,24,1) 100%);
+    background: -webkit-linear-gradient(155deg, rgba(36,124,40,1) 0%, rgba(20,101,24,1) 100%);
+    background: linear-gradient(155deg, rgba(36,124,40,1) 0%, rgba(20,101,24,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#247c28",endColorstr="#146518",GradientType=1);
+    color: white;
+}
+.jumbotron.blue{
+    background: rgb(86,119,255);
+    background: -moz-linear-gradient(155deg, rgba(86,119,255,1) 0%, rgba(76,107,233,1) 100%);
+    background: -webkit-linear-gradient(155deg, rgba(86,119,255,1) 0%, rgba(76,107,233,1) 100%);
+    background: linear-gradient(155deg, rgba(86,119,255,1) 0%, rgba(76,107,233,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5677ff",endColorstr="#4c6be9",GradientType=1);
+    color: white;
+}
+.jumbotron.light-blue{
+    background: rgb(205,216,255);
+    background: -moz-linear-gradient(155deg, rgba(205,216,255,1) 0%, rgba(183,197,244,1) 100%);
+    background: -webkit-linear-gradient(155deg, rgba(205,216,255,1) 0%, rgba(183,197,244,1) 100%);
+    background: linear-gradient(155deg, rgba(205,216,255,1) 0%, rgba(183,197,244,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#cdd8ff",endColorstr="#b7c5f4",GradientType=1);
+}
+.jumbotron.dark-blue{
+    background: rgb(61,86,185);
+    background: -moz-linear-gradient(155deg, rgba(61,86,185,1) 0%, rgba(35,60,156,1) 100%);
+    background: -webkit-linear-gradient(155deg, rgba(61,86,185,1) 0%, rgba(35,60,156,1) 100%);
+    background: linear-gradient(155deg, rgba(61,86,185,1) 0%, rgba(35,60,156,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3d56b9",endColorstr="#233c9c",GradientType=1);
+    color: white;
+}
+.button.green{
     background-color: #49ac4d;
     color: white;
 }
@@ -151,7 +191,13 @@ a.button{
     background-color: #439f47;
     color: white;
 }
-.button.dark-green, .jumbotron.dark-green{
+.button.light-green{
+    background-color: #ccffce;
+}
+.button.light-green:hover{
+    background-color: #bcf5bf;
+}
+.button.dark-green{
     background-color: #247c28;
     color: white;
 }
@@ -159,21 +205,21 @@ a.button{
     background-color: #1f7123;
     color: white;
 }
-.button.blue, .jumbotron.blue{
-    background-color: #3b61ff;
+.button.blue{
+    background-color: #5677ff;
     color: white;
 }
 .button.blue:hover{
-    background-color: #3256ea;
+    background-color: #4d6df0;
     color: white;
 }
-.button.light-blue, .jumbotron.light-blue{
-    background-color: #b7c6ff;
+.button.light-blue{
+    background-color: #cdd8ff;
 }
 .button.light-blue:hover{
-    background-color: #b1c0f7;
+    background-color: #c0ccf4;
 }
-.button.dark-blue, .jumbotron.dark-blue{
+.button.dark-blue{
     background-color: #3d56b9;
     color: white;
 }
