@@ -8,11 +8,34 @@ Home.css
     background-size: cover;
     text-shadow: -1px 1px 12px rgba(0,0,0,0.75);
 }
-.main-hello{
-    background: #49a04f url("https://bunnbuns.net/background-profile-2.jpg") no-repeat center;
+.big-boi{
+    height: 100vh;
+    width:100%;
+    background: #65b96b url('https://bunnbuns.net/background-profile-2.jpg') no-repeat center;
     background-size: cover;
-    padding: 3.5rem 0 2.85rem 0;
-    transition: all 0.2s;
+    position: relative;
+    color: white;
+}
+.big-boi .vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.big-boi .bottom-icon{
+    height: 48px;
+    width: 48px;
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    bottom: 0;
+    left: -webkit-calc(50% - 24px);
+    left: calc(50% - 24px);
+}
+.big-boi .bottom-icon i{
+    font-size: 26px;
+    color: rgba(255,255,255,0.65);
 }
 .main-hello .pfp{
     box-shadow: -1px 1px 8px rgba(0,0,0,0.66);
@@ -35,6 +58,7 @@ Home.css
     display: inline-block;
     text-align: left;
     font-size: 2.5rem;
+    font-weight: bold;
 }
 .main-hello .info .sub-text{
     text-align: left;
@@ -79,8 +103,11 @@ Home.css
 .main-hello .btn.tw:hover{
     color: #1da1f2;
 }
+.main-hello .btn.md:hover{
+    color: #3088d4;
+}
 .main-hello .btn.cp:hover{
-    color: #0ebeff;
+    color: #0a0a08;
 }
 .main-hello .btn.sc:hover{
     color: #ff8800;
@@ -107,7 +134,7 @@ Home.css
 .main-hello .socials-more{
     display: inline-block;
     margin-top: .25rem;
-    color:rgba(255, 255, 255, 0.6);
+    color:rgba(255, 255, 255, 0.75);
     text-decoration: none;
     cursor: pointer;
 }

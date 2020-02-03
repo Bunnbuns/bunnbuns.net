@@ -115,6 +115,8 @@ p{
     white-space: nowrap;
     border-radius: 6px;
     margin-bottom: 6px;
+    margin-right: 2px;
+    margin-left: 2px;
     font-weight: 500;
 }
 a.button{
@@ -128,15 +130,6 @@ a.button{
     font-size: 1.35rem;
 }
 /* colors */
-.button{
-    background-color: #e3e3e3;
-    box-shadow: -1px 1px 3px rgba(0,0,0,0.2);
-    transition: all 0.2s;
-}
-.button:hover{
-    background-color: #d9d9d9;
-    box-shadow: -1px 1px 6px rgba(0,0,0,0.46);
-}
 .jumbotron.green{
     background: rgb(73,172,77);
     background: -moz-linear-gradient(155deg, rgba(73,172,77,1) 0%, rgba(67,159,71,1) 100%);
@@ -151,6 +144,7 @@ a.button{
     background: -webkit-linear-gradient(155deg, rgba(204,255,206,1) 0%, rgba(164,236,166,1) 100%);
     background: linear-gradient(155deg, rgba(204,255,206,1) 0%, rgba(164,236,166,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ccffce",endColorstr="#a4eca6",GradientType=1);
+    color: #212529;
 }
 .jumbotron.dark-green{
     background: rgb(36,124,40);
@@ -174,6 +168,7 @@ a.button{
     background: -webkit-linear-gradient(155deg, rgba(205,216,255,1) 0%, rgba(183,197,244,1) 100%);
     background: linear-gradient(155deg, rgba(205,216,255,1) 0%, rgba(183,197,244,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#cdd8ff",endColorstr="#b7c5f4",GradientType=1);
+    color: #212529;
 }
 .jumbotron.dark-blue{
     background: rgb(61,86,185);
@@ -183,57 +178,31 @@ a.button{
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3d56b9",endColorstr="#233c9c",GradientType=1);
     color: white;
 }
-.button.green{
-    background-color: #49ac4d;
-    color: white;
+/* buttons */
+.button{
+    background-color: #dde2f5;
+    box-shadow: none;
+    transition: all 0.2s;
 }
-.button.green:hover{
-    background-color: #439f47;
-    color: white;
+.button:hover{
+    background-color: #e7ecfd;
+    box-shadow: 0px 0px 4px rgba(231, 236, 253, .25);
 }
-.button.light-green{
-    background-color: #ccffce;
+.button:active, .button:focus{
+    background-color: rgb(231, 236, 253);
+    box-shadow: 0px 0px 5px rgba(231, 236, 253, .4);
 }
-.button.light-green:hover{
-    background-color: #bcf5bf;
+/* button outline */
+.button.outline{
+    border-width: 1px;
+    border-style: solid;
+    box-shadow: none;
+    background-color: transparent;
+    color: #212529;
 }
-.button.dark-green{
-    background-color: #247c28;
-    color: white;
-}
-.button.dark-green:hover{
-    background-color: #1f7123;
-    color: white;
-}
-.button.blue{
-    background-color: #5677ff;
-    color: white;
-}
-.button.blue:hover{
-    background-color: #4d6df0;
-    color: white;
-}
-.button.light-blue{
-    background-color: #cdd8ff;
-}
-.button.light-blue:hover{
-    background-color: #c0ccf4;
-}
-.button.dark-blue{
-    background-color: #3d56b9;
-    color: white;
-}
-.button.dark-blue:hover{
-    background-color: #374faa;
-    color: white;
-}
-.button.red, .jumbotron.red{
-    background-color: #ff4141;
-    color: white;
-}
-.button.red:hover{
-    background-color: #d93c3c;
-    color: white;
+.button.outline:hover,.button.outline{
+    background-color: transparent;
+    color: #212529;
 }
 /* more */
 .page{
