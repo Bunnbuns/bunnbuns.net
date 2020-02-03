@@ -35,7 +35,7 @@ Home.css
 }
 .big-boi .bottom-icon i{
     font-size: 26px;
-    color: rgba(255,255,255,0.65);
+    color: rgba(255,255,255,0.6);
 }
 .main-hello .pfp{
     box-shadow: -1px 1px 8px rgba(0,0,0,0.66);
@@ -57,12 +57,12 @@ Home.css
 .main-hello .info .text{
     display: inline-block;
     text-align: left;
-    font-size: 2.5rem;
+    font-size: 2.75rem;
     font-weight: bold;
 }
 .main-hello .info .sub-text{
     text-align: left;
-    font-size: 1rem;
+    font-size: 1.25rem;
 }
 .main-hello .social{
     margin:.5rem 0 0 0;
@@ -73,6 +73,7 @@ Home.css
 .main-hello .btn{
     display: inline-block;
     text-shadow: -1px 1px 8px rgba(0,0,0,0.66);
+    font-size: 1.12rem;
     margin:4px 4px;
     transition: all 0.2s;
 }
@@ -123,12 +124,12 @@ Home.css
     color: #49b9ca;
 }
 .main-hello .btn i{
-    font-size: 2.75rem;
+    font-size: 2.85rem;
 }
 .main-hello .at{
     color:rgba(255, 255, 255, 0.9);
     text-shadow: -1px 1px 8px rgba(0,0,0,0.66);
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     margin: 1rem 0 .25rem 0;
 }
 .main-hello .socials-more{

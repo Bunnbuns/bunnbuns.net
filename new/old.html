@@ -14,31 +14,13 @@
         <link rel="stylesheet" href="static/css/style.css">
         <link rel="stylesheet" href="static/css/home.css">
         
-        <style>
-            .big-boi{
-                position: relative;
-            }
-            .big-boi .bottom-icon{
-                height: 48px;
-                width: 48px;
-                text-align: center;
-                vertical-align: middle;
-                position: absolute;
-                bottom: 0;
-                left: -webkit-calc(50% - 24px);
-                left: calc(50% - 24px);
-            }
-            .big-boi .bottom-icon i{
-                font-size: 26px;
-                color: rgba(255,255,255,0.72);
-            }
-        </style>
     </head>
     <body>
         
-        <div class="big-boi main-hello">
-        
-            <div class="container vertical-center">
+        <div class="page">
+
+            <div class="main-hello text-white">
+                <div class="container">
                     <div class="text-center">
                         <div style="margin: 0 8px">
                             <img class="pfp" src="https://bunnbuns.net/buna-square.png">
@@ -59,19 +41,19 @@
                                title="Keybase" target="_blank"><i class="fa fa-keybase"></i></a>
                             <a class="btn li" href="https://www.linkedin.com/in/ben-border/"
                                title="LinkedIn" target="_blank"><i class="fa fa-linkedin-square"></i></a>
-                            <br>
+                        </div>
+                        
+                        <div id="moreSocials" style="display: none;">
+                            <a class="btn sp" href="https://open.spotify.com/user/bunnbuns"
+                               title="Spotify" target="_blank"><i class="fa fa-spotify"></i></a>
+                            <a class="btn dc" href="https://discordapp.com/users/237359484488384512"
+                               title="Discord" target="_blank"><i class="fa fa-discord-alt"></i></a>
                             <a class="btn tw" href="https://twitter.com/BunnbunsAndBen"
                                title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
                             <a class="btn cp" href="https://codepen.io/Bunnbuns/"
                                title="CodePen" target="_blank"><i class="fa fa-codepen"></i></a>
                             <a class="btn sc" href="https://soundcloud.com/bunnbuns"
-                               title="SoundCloud" target="_blank"><i class="fa fa-soundcloud"></i></a>
-                            <a class="btn md" href="https://mastodon.social/@bunnbuns"
-                               title="Mastodon" target="_blank"><i class="fa fa-mastodon"></i></a>
-                            <a class="btn sp" href="https://open.spotify.com/user/bunnbuns"
-                               title="Spotify" target="_blank"><i class="fa fa-spotify"></i></a>
-                            <a class="btn dc" href="https://discordapp.com/users/237359484488384512"
-                               title="Discord" target="_blank"><i class="fa fa-discord-alt"></i></a>
+                               title="Soundcloud" target="_blank"><i class="fa fa-soundcloud"></i></a>
                             
                             <div>
                                 <a class="btn pz" href="https://panzoid.com/users/Bunnbuns_Ben_co"
@@ -82,22 +64,72 @@
                                title="STiBaRC" target="_blank">STiBaRC</a>
                             </div>
                         </div>
+                        
+                        <div>
+                            <a id="moreSocialsLink" class="socials-more" onclick="moreSocials()">More <i class="fa fa-caret-down"></i></a>
+                        </div>
+                        
                     </div>
+                </div>
             </div>
-            
-            <div class="bottom-icon">
-                <i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
-            </div>
-            
-        </div>
-        
-        <div class="page">
             
             <div class="jumbotron light-green">
                 <h1 class="margin-box text-center">Projects</h1>
             </div>
             
+            <div class="container">
+                <div class="margin-box text-center">
+                    <p>Here are some projects I've worked on:</p>
+                    <a href="https://bunnbuns.net/help/" class="button ">Bunnbuns Help</a>
+                    <a href="https://bunnbuns.net/mc/" class="button">MC Servers</a>
+                    <a href="https://topgun09.rip" class="button">The Topgun09 Project</a>
+                    <br><br>
+                    <p>More is on my <a href="https://github.com/Bunnbuns">GitHub page</a></p>
+                </div>
+            </div>
+            
+            <br>
+            
+            <div class="jumbotron light-green">
+                <h1 class="margin-box text-center">Websites</h1>
+            </div>
+            <div class="container">
+                <div class="margin-box text-center">
+                    <p>Websites I've helped with</p>
+                    <div>
+                        <li><a >manitoudemolay.org</a></li>
+                        <li><a >benworld.net</a></li>
+                        <li><a >stibarc.com</a></li>
+                        <li><a >rt.bunnbuns.net</a></li>
+                    </div>
+                    <p class="text-left"></p>
+                </div>
+            </div>
+
+            <br><br><br><br>
+        
+        </div><!-- /page -->
+        
+        <div class="jumbotron full text-center text-white" style="margin-bottom:0">
+            <div>
+                <h1 class="mt-small">Bunnbuns & Ben co.</h1>
+                <p>Web development & Digital Content</p> 
+            </div>
         </div>
         
+        <script>
+            var moreSocialsDisplay = 0;
+            function moreSocials(){
+                if(moreSocialsDisplay == 0){
+                    moreSocialsDisplay = 1;
+                    document.getElementById("moreSocials").style.display = "block";
+                    document.getElementById("moreSocialsLink").innerHTML = 'Less <i class="fa fa-caret-up"></i>';
+                }else if(moreSocialsDisplay == 1){
+                    moreSocialsDisplay = 0;
+                    document.getElementById("moreSocials").style.display = "none";
+                    document.getElementById("moreSocialsLink").innerHTML = 'More <i class="fa fa-caret-down"></i>';
+                }
+            }
+        </script>
     </body>
 </html>
