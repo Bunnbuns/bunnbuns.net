@@ -80,47 +80,47 @@ Home.css
 .main-hello .btn:hover{
     text-shadow: -1px 1px 11px rgba(0,0,0,0.75);
 }
-.main-hello .btn.gh:hover{
+.main-hello .btn.gh:hover,.main-hello .btn.gh:focus{
     color: #171515;
 }
-.main-hello .btn.yt:hover{
+.main-hello .btn.yt:hover,.main-hello .btn.yt:focus{
     color: #ff0000;
 }
-.main-hello .btn.ig:hover{
+.main-hello .btn.ig:hover,.main-hello .btn.ig:focus{
     color: #ed4a55;
 }
-.main-hello .btn.kb:hover{
+.main-hello .btn.kb:hover,.main-hello .btn.kb:focus{
     color: #4c8eff;
 }
-.main-hello .btn.li:hover{
+.main-hello .btn.li:hover,.main-hello .btn.li:focus{
     color: #0073b1;
 }
-.main-hello .btn.sp:hover{
+.main-hello .btn.sp:hover,.main-hello .btn.sp:focus{
     color: #1db954;
 }
-.main-hello .btn.dc:hover{
+.main-hello .btn.dc:hover,.main-hello .btn.dc:focus{
     color: #7289da;
 }
-.main-hello .btn.tw:hover{
+.main-hello .btn.tw:hover,.main-hello .btn.tw:focus{
     color: #1da1f2;
 }
-.main-hello .btn.md:hover{
+.main-hello .btn.md:hover,.main-hello .btn.md:focus{
     color: #3088d4;
 }
-.main-hello .btn.cp:hover{
+.main-hello .btn.cp:hover,.main-hello .btn.cp:focus{
     color: #0a0a08;
 }
-.main-hello .btn.sc:hover{
+.main-hello .btn.sc:hover,.main-hello .btn.sc:focus{
     color: #ff8800;
 }
-.main-hello .btn.pz:hover{
+.main-hello .btn.pz:hover,.main-hello .btn.pz:focus{
     color: #1862ab;
     text-shadow: -1px 1px 11px rgba(93, 93, 93, 0.85);
 }
-.main-hello .btn.st:hover{
+.main-hello .btn.st:hover,.main-hello .btn.st:focus{
     color: #f59c42;
 }
-.main-hello .btn.sb:hover{
+.main-hello .btn.sb:hover,.main-hello .btn.sb:focus{
     color: #49b9ca;
 }
 .main-hello .btn i{

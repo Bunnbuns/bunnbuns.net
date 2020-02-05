@@ -123,8 +123,10 @@ p{
     position: fixed;
     width:100%;
     overflow: hidden;
-    background-color: rgba(89, 175, 93, 0.9);
+    background-color: rgba(82, 88, 82, 0.9);
     z-index: 500;
+    -webkit-box-shadow: 0 4px 4px rgba(0,0,0,.06);
+    box-shadow: 0 4px 4px rgba(0,0,0,.06);
 }
 .topnav a{
     float: left;
@@ -134,12 +136,14 @@ p{
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    -webkit-transition: background-color .2s;
+    transition: background-color .2s;
 }
 .topnav a:hover{
-    background-color: rgba(126, 226, 129, 0.2);
+    background-color: rgba(77, 83, 77, 0.93);
 }
 .topnav a.active{
-    background-color: rgba(126, 226, 129, 0.5);
+    background-color: rgba(70, 78, 70, 0.96);
     color: white;
 }
 .topnav .icon{
@@ -166,7 +170,7 @@ p{
     }
 }
 /* colors */
-.jumbotron.green{
+.green{
     background: rgb(73,172,77);
     background: -moz-linear-gradient(155deg, rgba(73,172,77,1) 0%, rgba(67,159,71,1) 100%);
     background: -webkit-linear-gradient(155deg, rgba(73,172,77,1) 0%, rgba(67,159,71,1) 100%);
@@ -174,7 +178,7 @@ p{
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#49ac4d",endColorstr="#439f47",GradientType=1);
     color: white;
 }
-.jumbotron.light-green{
+.light-green{
     background: rgb(204,255,206);
     background: -moz-linear-gradient(155deg, rgba(204,255,206,1) 0%, rgba(164,236,166,1) 100%);
     background: -webkit-linear-gradient(155deg, rgba(204,255,206,1) 0%, rgba(164,236,166,1) 100%);
@@ -182,7 +186,7 @@ p{
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ccffce",endColorstr="#a4eca6",GradientType=1);
     color: #212529;
 }
-.jumbotron.dark-green{
+.dark-green{
     background: rgb(36,124,40);
     background: -moz-linear-gradient(155deg, rgba(36,124,40,1) 0%, rgba(20,101,24,1) 100%);
     background: -webkit-linear-gradient(155deg, rgba(36,124,40,1) 0%, rgba(20,101,24,1) 100%);
@@ -190,7 +194,7 @@ p{
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#247c28",endColorstr="#146518",GradientType=1);
     color: white;
 }
-.jumbotron.blue{
+.blue{
     background: rgb(86,119,255);
     background: -moz-linear-gradient(155deg, rgba(86,119,255,1) 0%, rgba(76,107,233,1) 100%);
     background: -webkit-linear-gradient(155deg, rgba(86,119,255,1) 0%, rgba(76,107,233,1) 100%);
@@ -198,7 +202,7 @@ p{
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5677ff",endColorstr="#4c6be9",GradientType=1);
     color: white;
 }
-.jumbotron.light-blue{
+.light-blue{
     background: rgb(205,216,255);
     background: -moz-linear-gradient(155deg, rgba(205,216,255,1) 0%, rgba(183,197,244,1) 100%);
     background: -webkit-linear-gradient(155deg, rgba(205,216,255,1) 0%, rgba(183,197,244,1) 100%);
@@ -206,7 +210,7 @@ p{
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#cdd8ff",endColorstr="#b7c5f4",GradientType=1);
     color: #212529;
 }
-.jumbotron.dark-blue{
+.dark-blue{
     background: rgb(61,86,185);
     background: -moz-linear-gradient(155deg, rgba(61,86,185,1) 0%, rgba(35,60,156,1) 100%);
     background: -webkit-linear-gradient(155deg, rgba(61,86,185,1) 0%, rgba(35,60,156,1) 100%);
@@ -221,10 +225,10 @@ p{
     text-decoration: none;
     justify-content: center;
     font-size: 1.15rem;
-    padding-bottom: 0.375em;
-    padding-left: 0.75em;
-    padding-right: 0.75em;
-    padding-top: 0.375em;
+    padding-bottom: 0.4em;
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+    padding-top: 0.4em;
     text-align: center;
     white-space: nowrap;
     border-radius: 6px;
@@ -232,18 +236,23 @@ p{
     margin-right: 2px;
     margin-left: 2px;
     font-weight: 500;
-    background-color: #6fcb79;
+    background-color: rgb(83, 188, 88);
+    box-shadow: none;
     color: white;
-    transition: all 0.2s;
+    -webkit-transition: all.2s;
+    transition: all .2s;
 }
 .button:hover{
-    background-color: #78d883;
     color: white;
-    box-shadow: 0px 0px 4px rgba(231, 236, 253, .25);
+    background-color: rgb(96, 198, 101);
+    -webkit-box-shadow: 0px 0px 3px rgba(96, 198, 101, 0.25);
+    box-shadow: 0px 0px 3px rgba(96, 198, 101, 0.25);
 }
 .button:active, .button:focus{
-    background-color: #80e28c;
-    box-shadow: 0px 0px 5px rgba(231, 236, 253, .4);
+    color: white;
+    background-color: rgb(104, 214, 109);
+    -webkit-box-shadow: 0px 0px 5px rgba(104, 214, 109, 0.45);
+    box-shadow: 0px 0px 5px rgba(104, 214, 109, 0.45);
 }
 .button.small{
     font-size: 1rem;
@@ -257,23 +266,24 @@ p{
 .button.outline{
     border-width: 1px;
     border-style: solid;
-    border-color: #6fcb79;
     box-shadow: none;
     background-color: transparent;
-    color: #6fcb79;
+    border-color: rgb(73,172,77);
+    color: rgb(73,172,77);
 }
-.button.outline:hover,.button.outline{
+.button.outline:hover{
     background-color: transparent;
-    color: #7ee289;
+    color: rgb(96, 198, 101);
+    border-color: rgb(96, 198, 101);
+}
+.button.outline:active, .button.outline:focus{
+    background-color: transparent;
+    color: rgb(104, 214, 109);
+    border-color: rgb(104, 214, 109);
 }
 /* more */
 .page{
     min-height: 100vh;
-}
-.jumbotron{
-    padding: 2rem 1rem;
-    margin-bottom: 2rem;
-    background-color: #e6e6e6;
 }
 
 
