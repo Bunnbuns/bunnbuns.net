@@ -124,7 +124,7 @@ p{
     position: fixed;
     width:100%;
     overflow: hidden;
-    background-color: rgba(82, 88, 82, 0.9);
+    background-color: rgba(82, 88, 82, 0.93);
     z-index: 500;
     -webkit-box-shadow: 0 4px 4px rgba(0,0,0,.06);
     box-shadow: 0 4px 4px rgba(0,0,0,.06);
@@ -141,10 +141,10 @@ p{
     transition: background-color .2s;
 }
 .topnav a:hover{
-    background-color: rgba(77, 83, 77, 0.93);
+    background-color: rgba(70, 78, 70, 0.47);
 }
 .topnav a.active{
-    background-color: rgba(70, 78, 70, 0.96);
+    background-color: rgba(70, 78, 70, 0.52);
     color: white;
 }
 .topnav .icon{
