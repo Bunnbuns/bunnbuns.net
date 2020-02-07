@@ -124,7 +124,7 @@ p{
     position: fixed;
     width:100%;
     overflow: hidden;
-    background-color: rgba(133, 172, 133, 0.9);
+    background-color: rgba(120, 163, 94, .92);
     z-index: 500;
     -webkit-box-shadow: 0 4px 4px rgba(0,0,0,.06);
     box-shadow: 0 4px 4px rgba(0,0,0,.06);
@@ -132,7 +132,7 @@ p{
 .topnav a{
     float: left;
     display: block;
-    color: #f8f8f8;
+    color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -141,10 +141,10 @@ p{
     transition: background-color .2s;
 }
 .topnav a:hover{
-    background-color: rgba(120, 152, 120, 0.5);
+    background-color: rgba(132, 178, 103, 0.55);
 }
 .topnav a.active{
-    background-color: rgba(114, 144, 114, 0.7);
+    background-color: rgba(138, 185, 109, 0.6);
     color: white;
 }
 .topnav .icon{
