@@ -3,9 +3,6 @@
 Style.css
 #############
 */
-*{
-    font-family: sans-serif;
-}
 *, ::after, ::before{
     box-sizing: border-box;
 }
@@ -124,7 +121,7 @@ p{
     position: fixed;
     width:100%;
     overflow: hidden;
-    background-color: rgba(116, 178, 95, 0.87);
+    background-color: rgba(116, 178, 95, 0.92);
     z-index: 500;
     -webkit-box-shadow: 0 4px 4px rgba(0,0,0,.06);
     box-shadow: 0 4px 4px rgba(0,0,0,.06);
@@ -218,6 +215,10 @@ p{
     background: linear-gradient(155deg, rgba(61,86,185,1) 0%, rgba(35,60,156,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3d56b9",endColorstr="#233c9c",GradientType=1);
     color: white;
+}
+.jumbotron{
+    display: block;
+    padding: 5rem;
 }
 /* buttons */
 .button {

@@ -1,0 +1,138 @@
+body{
+    background: url(images/dirt-dark.png) repeat;
+    image-rendering: pixelated;
+    background-size: 64px;
+    background-color: #18100A;
+    color: #efefef;
+}
+@font-face {
+    font-family: "Minecraft";
+    font-style: normal;
+    font-weight: 400;
+    src: url("https://bunnbuns.net/mc/fonts/minecraft_font.eot") format("eot"), 
+        url("https://bunnbuns.net/mc/fonts/minecraft_font.woff") format("woff"), 
+        url("https://bunnbuns.net/mc/fonts/minecraft_font.ttf") format("truetype"), 
+        url("https://bunnbuns.net/mc/fonts/minecraft_font.svg#Minecraft") format("svg");
+}
+.mc-text{
+    font-family: Minecraft, sans-serif;
+    color:white;
+}
+.mc-text.gray{
+    font-family: Minecraft, sans-serif;
+    color:rgb(117, 117, 117);
+}
+.mc-text.has-shadow{
+    text-shadow: 2px 2px #3F3F28;
+}
+.mc-header{
+    min-height: 4.5rem;
+    width: 100%;
+    background: url(images/dirt.png) repeat;
+    box-shadow: 0 0 10px 4px rgba(0,0,0,1);
+    background-size: 64px;
+    position: fixed;
+    text-align: center;
+}
+.mc-header.bottom{
+    padding: 0;
+    bottom: 0;
+}
+.content{
+    padding-top: 5rem;
+    text-align: center;
+}
+.mc-top-header .mc-button{
+    margin-top: 3.25rem;
+}
+.mc-banner-in .ping-badge.great{
+    background: url(images/icons.png) 0px 239px;
+    left: 0;
+    height: 8px;
+    width: 8px;
+    display: inline-block;
+    -ms-transform: scale(2.5, 2.5);
+    -webkit-transform: scale(2.5, 2.5);
+    transform: scale(2.5, 2.5);
+    image-rendering: pixelated;
+    margin: 0 5px 0 0;
+}
+.mc-banner-in .ping-badge.bad{
+    background: url(images/icons.png) 0px 200px;
+    left: 0;
+    height: 8px;
+    width: 8px;
+    display: inline-block;
+    -ms-transform: scale(2.5, 2.5);
+    -webkit-transform: scale(2.5, 2.5);
+    transform: scale(2.5, 2.5);
+    image-rendering: pixelated;
+    margin: 0 5px 0 0;
+}
+.mc-button{
+    height: 40px;
+    min-width: 135px;
+    outline: 2px solid black;
+    margin: 0;
+    display: block;
+    background-image: url('images/button_center.png');
+    background-repeat: repeat;
+    padding: 0;
+    font-family: Minecraft, sans-serif;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px #3F3F28;
+    border-bottom: 4px solid #565656;
+    border-right: 2px solid #565656;
+    border-left: 2px solid #AAA;
+    border-top: 2px solid #AAA;
+    box-sizing: border-box;
+    font-size: 16px;
+    text-decoration: none;
+    background-color: #6D6D6D;
+    -webkit-user-select: none;
+}
+.mc-button span{
+    position: relative;
+    line-height: 40px;
+    bottom: 3px;
+    text-decoration: none;
+}
+.mc-button:hover{
+    border-bottom: 4px solid #59639A;
+    border-right: 2px solid #59639A;
+    border-left: 2px solid #BDC6FF;
+    border-top: 2px solid #BDC6FF;
+    background-image: url('images/button_active_center.png');
+    color: #FFFFA0;
+    text-decoration: none;
+    background-color: #7C86BE;
+}
+.mc-tooltip{
+    text-shadow: 0.1em 0.1em #333;
+    display: inline-block;
+    font-family: Minecraft, sans-serif;
+    color: #fff;
+    background-color: #110210;
+    border: 4px solid;
+    border-image: url(images/mc-tooltip-border-12x12.png) 4 repeat;
+    padding: 3px 4px 4px 4px;
+    background-clip: padding-box;
+}
+#playerlist{
+    color: #808080;
+}
+.mc-favicon-top{
+    display: inline-block;
+    background: url(images/world_selection.png) 0 0;
+    left: 0;
+    height: 32px;
+    width: 32px;
+    -ms-transform: scale(2.5, 2.5);
+    -webkit-transform: scale(2.5, 2.5);
+    transform: scale(2.5, 2.5);
+    image-rendering: pixelated;
+    margin: 16px;
+    position: absolute;
+    z-index: 1;
+}
