@@ -1,8 +1,33 @@
 function $(id) {
 	return document.getElementById(id); //less typing
 }
-
-
+//var frameAt = 0;
+//function loading(is){
+//    for(i = 0; i > 100; i++){
+//        if(frameAt >= 2){
+//            setTimeout(function(){ loadingFrame(frameAt) }, 250);
+//        }else{
+//            frameAt = 0;
+//            setTimeout(function(){ loadingFrame(frameAt) }, 250);
+//        }
+//        
+//    }
+//}
+//function loadingFrame(frameNum){
+//    if(frameNum == 0){
+//        $('loading').innerHTML = 'ooO';
+//    }
+//    if(frameNum == 1){
+//        $('loading').innerHTML = 'Ooo';
+//    }
+//    if(frameNum == 2){
+//        $('loading').innerHTML = 'oOo';
+//    }
+//}
+//
+//window.onload = function(){
+//    loading();
+//}
 
 //// Window load //
 //window.onload = function(){
