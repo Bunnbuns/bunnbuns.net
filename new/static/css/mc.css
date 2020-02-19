@@ -35,8 +35,12 @@ body{
     text-align: center;
 }
 .mc-header.bottom{
+    min-height: 5.25rem;
     padding: 0;
     bottom: 0;
+}
+.mc-header.bottom .mc-button{
+    margin-top: 1.25rem;
 }
 .content{
     padding-top: 5rem;
